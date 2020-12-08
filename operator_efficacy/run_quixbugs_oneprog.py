@@ -29,8 +29,8 @@ class MyProgram(TreeProgram):
         self.possible_edits = [StmtReplacement, StmtInsertion, StmtDeletion, ComparisonOperatorSetting]
 
     def load_config(self, path, config):
-        self.target_files = ["java_programs/LIS.java.xml"]
-        self.test_command = "./run_LIS.sh"
+        self.target_files = ["java_programs/SIEVE.java.xml"]
+        self.test_command = "./run_SIEVE.sh"
 
     def create_edit(self, patch=None):
         if len(self.possible_edits) == 0:
@@ -113,7 +113,7 @@ class ExpProtocol:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Running one program from QuixBugs')
     parser.add_argument('--epoch', type=int, default=20)
-    parser.add_argument('--iter', type=int, default=1000)
+    parser.add_argument('--iter', type=int, default=500)
     args = parser.parse_args()
 
     protocol = ExpProtocol()

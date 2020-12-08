@@ -1,0 +1,13 @@
+2020-12-07 20:50:54,406	[INFO]	Path to the temporal program variants: ./.pyggi/tmp_variants/QuixBugs/1607370654
+2020-12-07 20:50:54,406	[INFO]	========== EXPERIMENT FOR QUICKSORT  ==========
+2020-12-07 20:50:54,409	[INFO]	========== EPOCH 1 ==========
+2020-12-07 20:50:54,409	[INFO]	==== WARMUP ====
+2020-12-07 20:50:57,497	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-07 20:50:57,497	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-07 20:51:00,491	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-07 20:51:00,492	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-07 20:51:03,584	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-07 20:51:03,584	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-07 20:51:03,710	[INFO]	========== REPORT ==========
+2020-12-07 20:51:03,716	[INFO]	QUICKSORT experiment duration: 9.307000875473022
+2020-12-07 20:51:03,716	[INFO]	all experiments duration:

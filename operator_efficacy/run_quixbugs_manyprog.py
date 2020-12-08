@@ -157,7 +157,7 @@ class ExpProtocol:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Running one program from QuixBugs')
     parser.add_argument('--epoch', type=int, default=20)
-    parser.add_argument('--iter', type=int, default=1000)
+    parser.add_argument('--iter', type=int, default=500)
     args = parser.parse_args()
 
     experiment_durations = dict()

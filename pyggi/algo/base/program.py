@@ -332,7 +332,6 @@ class AbstractProgram(ABC):
 
     def evaluate_patch(self, patch, timeout=15):
         # apply + run
-        print("wchodze w evaluate_patch program")
         self.apply(patch)
         cwd = os.getcwd()
         try:
