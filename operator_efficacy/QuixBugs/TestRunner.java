@@ -7,10 +7,10 @@ public class TestRunner {
       Class klass = Class.forName(args[0]);
       Result result = JUnitCore.runClasses(klass);
 
-      //System.out.println(result.getFailureCount());
-      /* for (Failure failure : result.getFailures()) {
+      System.out.println(result.getFailureCount());
+      for (Failure failure : result.getFailures()) {
          System.out.println(failure.toString());
-      } */
+      }
 
       //System.out.println(result.getIgnoreCount());
       //System.out.println(result.getRunCount());
@@ -21,6 +21,7 @@ public class TestRunner {
       //  "failed: " + result.getFailureCount() + "," +
       //  "pass_all: " + result.wasSuccessful() + "}"
       //);
-      System.out.println(result.getFailureCount());
+
+      //System.out.println(result.getFailureCount());
    }
 }

@@ -1,0 +1,8 @@
+2020-12-11 16:33:16,887	[INFO]	Path to the temporal program variants: ./.pyggi/tmp_variants/QuixBugs/1607700796
+2020-12-11 16:33:16,887	[INFO]	========== EPOCH 1 ==========
+2020-12-11 16:33:16,887	[INFO]	==== WARMUP ====
+2020-12-11 16:33:19,896	[INFO]	WARM	SUCCESS	 6.0	
+2020-12-11 16:33:19,896	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 6.0>
+2020-12-11 16:33:22,961	[INFO]	WARM	SUCCESS	 6.0	
+2020-12-11 16:33:22,961	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 6.0>
+2020-12-11 16:33:25,051	[INFO]	========== REPORT ==========

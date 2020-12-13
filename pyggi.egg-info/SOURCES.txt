@@ -13,11 +13,11 @@ pyggi/algo/__init__.py
 pyggi/algo/genetic_programming.py
 pyggi/algo/local_search.py
 pyggi/algo/validation.py
-pyggi/algo/base/__init__.py
-pyggi/algo/base/algorithm.py
-pyggi/algo/base/edit.py
-pyggi/algo/base/patch.py
-pyggi/algo/base/program.py
+pyggi/base/__init__.py
+pyggi/base/algorithm.py
+pyggi/base/edit.py
+pyggi/base/patch.py
+pyggi/base/program.py
 pyggi/line/__init__.py
 pyggi/line/abstract_engine.py
 pyggi/line/edits.py

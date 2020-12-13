@@ -52,6 +52,7 @@ TARGET_FILES = [
         'MERGESORT',
         'MINIMUM_SPANNING_TREE',
         'NEXT_PALINDROME',
+        'NEXT_PERMUTATION',
         'PASCAL',
         'POSSIBLE_CHANGE',
         'POWERSET',

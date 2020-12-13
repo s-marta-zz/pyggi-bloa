@@ -11,7 +11,7 @@ import java.util.Set;
 
 import org.junit.Test;
 
-import correct_java_programs.MINIMUM_SPANNING_TREE;
+import java_programs.MINIMUM_SPANNING_TREE;
 import java_programs.Node;
 import java_programs.WeightedEdge;
 
