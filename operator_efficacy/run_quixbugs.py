@@ -17,46 +17,46 @@ from pyggi.algo import FirstImprovement
 from pyggi.utils import Logger
 
 TARGET_FILES = [
-        ### 'BITCOUNT', # initilal solution failed
+        # ### 'BITCOUNT', # initilal solution failed
         'BREADTH_FIRST_SEARCH',
-        ### 'BUCKETSORT', # no passing testcases
-        'DEPTH_FIRST_SEARCH',
-        'DETECT_CYCLE',
-        ### 'FIND_FIRST_IN_SORTED', # initilal solution failed
-        'FIND_IN_SORTED',
-        'FLATTEN',
-        ### 'GCD', # no passing testcases
-        'GET_FACTORS',
-        ### 'HANOI', # no passing testcases
-        'IS_VALID_PARENTHESIZATION',
-        'KHEAPSORT',
-        'KNAPSACK',
-        'KTH',
-        'LCS_LENGTH',
-        'LEVENSHTEIN',
-        'LIS',
-        'LONGEST_COMMON_SUBSEQUENCE',
-        'MAX_SUBLIST_SUM',
-        'MERGESORT',
-        ### 'MINIMUM_SPANNING_TREE', # initilal solution failed
-        'NEXT_PALINDROME',
-        'NEXT_PERMUTATION',
-        'PASCAL',
-        ### 'POSSIBLE_CHANGE', # no passing testcases
-        'POWERSET',
-        'QUICKSORT',
-        ### 'REVERSE_LINKED_LIST', # initilal solution failed
-        ### 'RPN_EVAL', # initilal solution failed
-        'SHORTEST_PATH_LENGTH',
-        'SHORTEST_PATH_LENGTHS',
-        ### 'SHORTEST_PATHS', # no passing testcases
-        ### 'SHUNTING_YARD', # no passing testcases
-        'SIEVE',
-        ### 'SQRT', # initilal solution failed
-        'SUBSEQUENCES',
-        ### 'TO_BASE', # no passing testcases
-        ### 'TOPOLOGICAL_ORDERING', # no passing testcases
-        'WRAP',
+        # ### 'BUCKETSORT', # no passing testcases
+        # 'DEPTH_FIRST_SEARCH',
+        # 'DETECT_CYCLE',
+        # ### 'FIND_FIRST_IN_SORTED', # initilal solution failed
+        # 'FIND_IN_SORTED',
+        # 'FLATTEN',
+        # ### 'GCD', # no passing testcases
+        # 'GET_FACTORS',
+        # ### 'HANOI', # no passing testcases
+        # 'IS_VALID_PARENTHESIZATION',
+        # 'KHEAPSORT',
+        # 'KNAPSACK',
+        # 'KTH',
+        # 'LCS_LENGTH',
+        # 'LEVENSHTEIN',
+        # 'LIS',
+        # 'LONGEST_COMMON_SUBSEQUENCE',
+        # 'MAX_SUBLIST_SUM',
+        # 'MERGESORT',
+        # ### 'MINIMUM_SPANNING_TREE', # initilal solution failed
+        # 'NEXT_PALINDROME',
+        # 'NEXT_PERMUTATION',
+        # 'PASCAL',
+        # ### 'POSSIBLE_CHANGE', # no passing testcases
+        # 'POWERSET',
+        # 'QUICKSORT',
+        # ### 'REVERSE_LINKED_LIST', # initilal solution failed
+        # ### 'RPN_EVAL', # initilal solution failed
+        # 'SHORTEST_PATH_LENGTH',
+        # 'SHORTEST_PATH_LENGTHS',
+        # ### 'SHORTEST_PATHS', # no passing testcases
+        # ### 'SHUNTING_YARD', # no passing testcases
+        # 'SIEVE',
+        # ### 'SQRT', # initilal solution failed
+        # 'SUBSEQUENCES',
+        # ### 'TO_BASE', # no passing testcases
+        # ### 'TOPOLOGICAL_ORDERING', # no passing testcases
+        # 'WRAP',
     ]
 
 STMT_TAGS = {
@@ -320,7 +320,7 @@ if __name__ == "__main__":
     for target in TARGET_FILES:
         protocol = ExpProtocol()
         protocol.nb_epoch = args.epoch
-        protocol.search = FirstImprovement()
+        protocol.search = MyFirstImprovement()
         protocol.search.stop['fitness'] = 0
         protocol.search.stop['steps'] = args.iter
 

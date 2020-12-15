@@ -23,10 +23,10 @@ TARGET_FILES = [
         # 'DEPTH_FIRST_SEARCH',
         # 'DETECT_CYCLE',
         # ### 'FIND_FIRST_IN_SORTED',
-        'FIND_IN_SORTED', # initilal solution failed
-        'FLATTEN',
-        # ### 'GCD', # no passing testcases
-        'GET_FACTORS',
+        # 'FIND_IN_SORTED', # initilal solution failed
+        # 'FLATTEN',
+        # # ### 'GCD', # no passing testcases
+        # 'GET_FACTORS',
         # ### 'HANOI', # no passing testcases
         # 'IS_VALID_PARENTHESIZATION',
         # 'KHEAPSORT',
@@ -39,12 +39,12 @@ TARGET_FILES = [
         # 'MAX_SUBLIST_SUM',
         # 'MERGESORT',
         # ### 'MINIMUM_SPANNING_TREE', # initilal solution failed
-        # 'NEXT_PALINDROME',
-        # 'NEXT_PERMUTATION',
-        # 'PASCAL',
-        # ### 'POSSIBLE_CHANGE', # no passing testcases
-        # 'POWERSET',
-        # 'QUICKSORT',
+        'NEXT_PALINDROME',
+        'NEXT_PERMUTATION',
+        'PASCAL',
+        ### 'POSSIBLE_CHANGE', # no passing testcases
+        'POWERSET',
+        'QUICKSORT',
         # ### 'REVERSE_LINKED_LIST', # initilal solution failed
         # ### 'RPN_EVAL', # initilal solution failed
         # 'SHORTEST_PATH_LENGTH',
