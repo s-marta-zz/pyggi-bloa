@@ -1,0 +1,2381 @@
+2020-12-18 11:46:57,822	[INFO]	Path to the temporal program variants: ./.pyggi/tmp_variants/QuixBugs/1608288417
+2020-12-18 11:46:57,822	[INFO]	========== EXPERIMENT FOR ['java_programs/QUICKSORT.java.xml']  ==========
+2020-12-18 11:46:57,822	[INFO]	modification points:
+ ['./if[1]', './if[1]/return[1]', './decl_stmt[1]', './decl_stmt[2]', './decl_stmt[3]', './for[1]', './for[1]/if[1]', './for[1]/if[1]/operator_comp[1]', './for[1]/if[1]/expr_stmt[1]', './for[1]/if[2]', './for[1]/if[2]/operator_comp[1]', './for[1]/if[2]/expr_stmt[1]', './decl_stmt[4]', './expr_stmt[1]', './expr_stmt[2]', './expr_stmt[3]', './expr_stmt[4]', './expr_stmt[5]', './return[1]']
+2020-12-18 11:46:57,822	[INFO]	number of statements and comparisons: 17, 2
+2020-12-18 11:46:57,823	[INFO]	========== EPOCH 1 ==========
+2020-12-18 11:46:57,823	[INFO]	==== WARMUP ====
+2020-12-18 11:47:00,924	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:47:00,924	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:47:03,912	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:47:03,912	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:47:06,947	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:47:06,947	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:47:09,994	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 11:47:09,994	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:47:09,994	[INFO]	==== START ====
+2020-12-18 11:47:13,503	[INFO]	1	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 9)})
+2020-12-18 11:47:17,220	[INFO]	2	SUCCESS	 9.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0)})
+2020-12-18 11:47:21,232	[INFO]	3	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 0)})
+2020-12-18 11:47:24,182	[INFO]	4	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 14)})
+2020-12-18 11:47:24,868	[INFO]	5	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 6), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15)})
+2020-12-18 11:47:24,870	[INFO]	6	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 14)})
+2020-12-18 11:47:25,695	[INFO]	7	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 18)})
+2020-12-18 11:47:26,512	[INFO]	8	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 14), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3), 'direction': 'before'})
+2020-12-18 11:47:27,345	[INFO]	9	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 4)})
+2020-12-18 11:47:30,849	[INFO]	10	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 16)})
+2020-12-18 11:47:34,082	[INFO]	11	SUCCESS	 13.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 9), 'ingredient': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 11:47:37,646	[INFO]	12	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 13)})
+2020-12-18 11:47:38,641	[INFO]	13	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 2), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5), 'direction': 'before'})
+2020-12-18 11:47:39,601	[INFO]	14	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 3), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0)})
+2020-12-18 11:47:40,540	[INFO]	15	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 8), 'direction': 'before'})
+2020-12-18 11:47:41,555	[INFO]	16	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 2)})
+2020-12-18 11:47:45,092	[INFO]	17	SUCCESS	*0.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 11:47:45,093	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 11:47:45,093	[INFO]	==== END ====
+2020-12-18 11:47:45,093	[INFO]	Reason: target fitness reached
+2020-12-18 11:47:45,094	[INFO]	
+2020-12-18 11:47:45,094	[INFO]	========== EPOCH 2 ==========
+2020-12-18 11:47:45,095	[INFO]	==== WARMUP ====
+2020-12-18 11:47:48,634	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:47:48,634	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:47:52,113	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:47:52,113	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:47:55,629	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:47:55,630	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:47:59,100	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 11:47:59,100	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:47:59,101	[INFO]	==== START ====
+2020-12-18 11:48:02,492	[INFO]	1	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>='})
+2020-12-18 11:48:03,419	[INFO]	2	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 0), 'ingredient': ('java_programs/QUICKSORT.java.xml', 13), 'direction': 'before'})
+2020-12-18 11:48:06,898	[INFO]	3	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '<='})
+2020-12-18 11:48:10,196	[INFO]	4	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>'})
+2020-12-18 11:48:11,073	[INFO]	5	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 5), 'ingredient': ('java_programs/QUICKSORT.java.xml', 1)})
+2020-12-18 11:48:14,467	[INFO]	6	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='})
+2020-12-18 11:48:14,468	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x != pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 11:48:14,470	[INFO]	7	SUCCESS	+1.0	
+2020-12-18 11:48:14,470	[DEBUG]	
+2020-12-18 11:48:15,437	[INFO]	8	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 0), 'ingredient': ('java_programs/QUICKSORT.java.xml', 16)})
+2020-12-18 11:48:18,794	[INFO]	9	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '=='})
+2020-12-18 11:48:22,284	[INFO]	10	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 14), 'direction': 'before'})
+2020-12-18 11:48:22,285	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 31,36 ****
+--- 31,37 ----
+          middle.add(pivot);
+          lesser = quicksort(lesser);
+          greater = quicksort(greater);
++         lesser = quicksort(lesser);
+          middle.addAll(greater);
+          lesser.addAll(middle);
+          return lesser;
+
+2020-12-18 11:48:22,286	[INFO]	11	SUCCESS	+1.0	
+2020-12-18 11:48:22,286	[DEBUG]	
+2020-12-18 11:48:25,614	[INFO]	12	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 5)})
+2020-12-18 11:48:28,946	[INFO]	13	SUCCESS	 12.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 9), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0)})
+2020-12-18 11:48:28,947	[INFO]	14	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>='})
+2020-12-18 11:48:28,948	[INFO]	15	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>'})
+2020-12-18 11:48:32,325	[INFO]	16	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '<'})
+2020-12-18 11:48:35,630	[INFO]	17	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 0)})
+2020-12-18 11:48:36,569	[INFO]	18	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 14), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3), 'direction': 'before'})
+2020-12-18 11:48:37,499	[INFO]	19	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 18), 'direction': 'before'})
+2020-12-18 11:48:37,501	[INFO]	20	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>'})
+2020-12-18 11:48:40,762	[INFO]	21	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 1)})
+2020-12-18 11:48:40,763	[INFO]	22	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>'})
+2020-12-18 11:48:40,764	[DEBUG]	
+2020-12-18 11:48:44,160	[INFO]	23	SUCCESS	*0.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>'}) | ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>='})
+2020-12-18 11:48:44,161	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x >= pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 11:48:44,161	[INFO]	==== END ====
+2020-12-18 11:48:44,161	[INFO]	Reason: target fitness reached
+2020-12-18 11:48:44,162	[INFO]	
+2020-12-18 11:48:44,162	[INFO]	========== EPOCH 3 ==========
+2020-12-18 11:48:44,162	[INFO]	==== WARMUP ====
+2020-12-18 11:48:47,552	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:48:47,553	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:48:50,878	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:48:50,878	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:48:54,415	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:48:54,415	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:48:57,711	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 11:48:57,712	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:48:57,712	[INFO]	==== START ====
+2020-12-18 11:48:58,457	[INFO]	1	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 9), 'ingredient': ('java_programs/QUICKSORT.java.xml', 12), 'direction': 'before'})
+2020-12-18 11:48:59,388	[INFO]	2	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 0), 'ingredient': ('java_programs/QUICKSORT.java.xml', 4), 'direction': 'before'})
+2020-12-18 11:49:00,257	[INFO]	3	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 8)})
+2020-12-18 11:49:03,727	[INFO]	4	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '!='})
+2020-12-18 11:49:07,143	[INFO]	5	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 11), 'ingredient': ('java_programs/QUICKSORT.java.xml', 14), 'direction': 'before'})
+2020-12-18 11:49:07,144	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 24,29 ****
+--- 24,30 ----
+              if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
++                 lesser = quicksort(lesser);
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 11:49:10,532	[INFO]	6	SUCCESS	 13.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 11), 'ingredient': ('java_programs/QUICKSORT.java.xml', 14), 'direction': 'before'}) | StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 13)})
+2020-12-18 11:49:10,533	[INFO]	7	SUCCESS	+1.0	
+2020-12-18 11:49:10,533	[DEBUG]	
+2020-12-18 11:49:10,534	[INFO]	8	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '!='})
+2020-12-18 11:49:13,873	[INFO]	9	SUCCESS	 12.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 13), 'ingredient': ('java_programs/QUICKSORT.java.xml', 16), 'direction': 'before'})
+2020-12-18 11:49:13,875	[INFO]	10	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'})
+2020-12-18 11:49:13,875	[DEBUG]	
+2020-12-18 11:49:17,206	[INFO]	11	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'}) | ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '<'})
+2020-12-18 11:49:20,557	[INFO]	12	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'}) | ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '=='})
+2020-12-18 11:49:20,558	[INFO]	13	PARSE_ERROR	 None	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'}) | MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 0), 'ingredient': ('java_programs/QUICKSORT.java.xml', 4), 'direction': 'before'})
+2020-12-18 11:49:21,443	[INFO]	14	PARSE_ERROR	 None	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'}) | MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 13), 'ingredient': ('java_programs/QUICKSORT.java.xml', 6), 'direction': 'before'})
+2020-12-18 11:49:21,444	[INFO]	15	SUCCESS	+1.0	
+2020-12-18 11:49:21,445	[DEBUG]	
+2020-12-18 11:49:22,355	[INFO]	16	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 12)})
+2020-12-18 11:49:23,282	[INFO]	17	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 2), 'ingredient': ('java_programs/QUICKSORT.java.xml', 16), 'direction': 'before'})
+2020-12-18 11:49:24,213	[INFO]	18	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 6), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5), 'direction': 'before'})
+2020-12-18 11:49:27,598	[INFO]	19	SUCCESS	 13.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 13), 'direction': 'before'})
+2020-12-18 11:49:28,490	[INFO]	20	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 12), 'direction': 'before'})
+2020-12-18 11:49:31,904	[INFO]	21	SUCCESS	 13.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5), 'direction': 'before'})
+2020-12-18 11:49:35,248	[INFO]	22	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 11:49:38,674	[INFO]	23	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>='})
+2020-12-18 11:49:39,624	[INFO]	24	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5), 'direction': 'before'})
+2020-12-18 11:49:43,220	[INFO]	25	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '=='})
+2020-12-18 11:49:44,230	[INFO]	26	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 0), 'ingredient': ('java_programs/QUICKSORT.java.xml', 6), 'direction': 'before'})
+2020-12-18 11:49:44,231	[INFO]	27	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'})
+2020-12-18 11:49:44,232	[DEBUG]	
+2020-12-18 11:49:45,185	[INFO]	28	PARSE_ERROR	 None	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'}) | MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 8), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5), 'direction': 'before'})
+2020-12-18 11:49:46,188	[INFO]	29	PARSE_ERROR	 None	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'}) | StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 11:49:46,189	[INFO]	30	SUCCESS	+1.0	
+2020-12-18 11:49:46,189	[DEBUG]	
+2020-12-18 11:49:46,190	[INFO]	31	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>'})
+2020-12-18 11:49:46,191	[DEBUG]	
+2020-12-18 11:49:46,191	[INFO]	32	SUCCESS	+1.0	
+2020-12-18 11:49:46,192	[DEBUG]	
+2020-12-18 11:49:49,691	[INFO]	33	SUCCESS	 12.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 11), 'ingredient': ('java_programs/QUICKSORT.java.xml', 12)})
+2020-12-18 11:49:50,687	[INFO]	34	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 12), 'ingredient': ('java_programs/QUICKSORT.java.xml', 2)})
+2020-12-18 11:49:51,640	[INFO]	35	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 8), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5)})
+2020-12-18 11:49:55,280	[INFO]	36	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 14)})
+2020-12-18 11:49:58,680	[INFO]	37	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 0)})
+2020-12-18 11:49:59,630	[INFO]	38	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 18)})
+2020-12-18 11:50:00,602	[INFO]	39	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 18), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5)})
+2020-12-18 11:50:01,564	[INFO]	40	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 2), 'ingredient': ('java_programs/QUICKSORT.java.xml', 18)})
+2020-12-18 11:50:04,923	[INFO]	41	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 17)})
+2020-12-18 11:50:05,817	[INFO]	42	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 12), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3), 'direction': 'before'})
+2020-12-18 11:50:06,769	[INFO]	43	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 17), 'direction': 'before'})
+2020-12-18 11:50:07,679	[INFO]	44	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 11), 'direction': 'before'})
+2020-12-18 11:50:08,582	[INFO]	45	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 1), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15)})
+2020-12-18 11:50:09,469	[INFO]	46	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 12)})
+2020-12-18 11:50:09,470	[INFO]	47	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '<'})
+2020-12-18 11:50:10,388	[INFO]	48	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 11:50:11,304	[INFO]	49	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 11:50:14,727	[INFO]	50	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 9)})
+2020-12-18 11:50:18,147	[INFO]	51	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '<='})
+2020-12-18 11:50:19,054	[INFO]	52	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 14), 'ingredient': ('java_programs/QUICKSORT.java.xml', 4)})
+2020-12-18 11:50:22,401	[INFO]	53	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>='})
+2020-12-18 11:50:25,696	[INFO]	54	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 1)})
+2020-12-18 11:50:29,144	[INFO]	55	SUCCESS	 12.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 16), 'direction': 'before'})
+2020-12-18 11:50:32,572	[INFO]	56	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 8)})
+2020-12-18 11:50:36,227	[INFO]	57	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '=='})
+2020-12-18 11:50:37,256	[INFO]	58	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 9)})
+2020-12-18 11:50:38,447	[INFO]	59	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 8), 'ingredient': ('java_programs/QUICKSORT.java.xml', 13)})
+2020-12-18 11:50:39,761	[INFO]	60	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 8), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 11:50:39,763	[INFO]	61	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 9)})
+2020-12-18 11:50:40,714	[INFO]	62	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 6)})
+2020-12-18 11:50:41,713	[INFO]	63	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 9), 'direction': 'before'})
+2020-12-18 11:50:45,837	[INFO]	64	SUCCESS	*0.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>='})
+2020-12-18 11:50:45,838	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x >= pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 11:50:45,839	[INFO]	==== END ====
+2020-12-18 11:50:45,839	[INFO]	Reason: target fitness reached
+2020-12-18 11:50:45,840	[INFO]	
+2020-12-18 11:50:45,840	[INFO]	========== EPOCH 4 ==========
+2020-12-18 11:50:45,841	[INFO]	==== WARMUP ====
+2020-12-18 11:50:49,359	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:50:49,359	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:50:52,704	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:50:52,704	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:50:56,063	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:50:56,064	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:50:59,375	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 11:50:59,375	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:50:59,375	[INFO]	==== START ====
+2020-12-18 11:51:02,745	[INFO]	1	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 8)})
+2020-12-18 11:51:06,028	[INFO]	2	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 1)})
+2020-12-18 11:51:06,808	[INFO]	3	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 11), 'ingredient': ('java_programs/QUICKSORT.java.xml', 9)})
+2020-12-18 11:51:10,260	[INFO]	4	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 5), 'ingredient': ('java_programs/QUICKSORT.java.xml', 14), 'direction': 'before'})
+2020-12-18 11:51:10,261	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 20,25 ****
+--- 20,27 ----
+          ArrayList<Integer> lesser = new ArrayList<Integer>();
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
++         lesser = quicksort(lesser);
++ 
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+
+2020-12-18 11:51:10,261	[INFO]	5	SUCCESS	+1.0	
+2020-12-18 11:51:10,262	[DEBUG]	
+2020-12-18 11:51:13,617	[INFO]	6	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 16)})
+2020-12-18 11:51:14,360	[INFO]	7	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 14), 'ingredient': ('java_programs/QUICKSORT.java.xml', 9), 'direction': 'before'})
+2020-12-18 11:51:17,696	[INFO]	8	SUCCESS	*0.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>='})
+2020-12-18 11:51:17,698	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x >= pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 11:51:17,699	[INFO]	==== END ====
+2020-12-18 11:51:17,699	[INFO]	Reason: target fitness reached
+2020-12-18 11:51:17,702	[INFO]	
+2020-12-18 11:51:17,702	[INFO]	========== EPOCH 5 ==========
+2020-12-18 11:51:17,703	[INFO]	==== WARMUP ====
+2020-12-18 11:51:21,002	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:51:21,002	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:51:24,421	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:51:24,421	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:51:27,742	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:51:27,743	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:51:31,115	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 11:51:31,116	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:51:31,116	[INFO]	==== START ====
+2020-12-18 11:51:34,554	[INFO]	1	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 17)})
+2020-12-18 11:51:35,274	[INFO]	2	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 6)})
+2020-12-18 11:51:35,278	[INFO]	3	SUCCESS	+1.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 4)})
+2020-12-18 11:51:35,279	[DEBUG]	
+2020-12-18 11:51:35,281	[INFO]	4	SUCCESS	+1.0	
+2020-12-18 11:51:35,282	[DEBUG]	
+2020-12-18 11:51:38,708	[INFO]	5	SUCCESS	 9.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0)})
+2020-12-18 11:51:42,129	[INFO]	6	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '<='})
+2020-12-18 11:51:45,504	[INFO]	7	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>'})
+2020-12-18 11:51:46,444	[INFO]	8	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 18)})
+2020-12-18 11:51:46,445	[INFO]	9	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>'})
+2020-12-18 11:51:49,770	[INFO]	10	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 16)})
+2020-12-18 11:51:50,669	[INFO]	11	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 6), 'ingredient': ('java_programs/QUICKSORT.java.xml', 13), 'direction': 'before'})
+2020-12-18 11:51:54,043	[INFO]	12	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '=='})
+2020-12-18 11:51:54,937	[INFO]	13	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 2)})
+2020-12-18 11:51:55,704	[INFO]	14	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 9), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5), 'direction': 'before'})
+2020-12-18 11:51:59,147	[INFO]	15	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 11:51:59,858	[INFO]	16	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 9)})
+2020-12-18 11:52:00,731	[INFO]	17	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 3), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15)})
+2020-12-18 11:52:01,620	[INFO]	18	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 5), 'ingredient': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 11:52:05,014	[INFO]	19	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15), 'direction': 'before'})
+2020-12-18 11:52:05,015	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 32,37 ****
+--- 32,38 ----
+          lesser = quicksort(lesser);
+          greater = quicksort(greater);
+          middle.addAll(greater);
++         greater = quicksort(greater);
+          lesser.addAll(middle);
+          return lesser;
+  
+
+2020-12-18 11:52:05,904	[INFO]	20	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15), 'direction': 'before'}) | StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 2)})
+2020-12-18 11:52:09,273	[INFO]	21	SUCCESS	 12.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15), 'direction': 'before'}) | StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 16)})
+2020-12-18 11:52:09,274	[INFO]	22	SUCCESS	+1.0	
+2020-12-18 11:52:09,274	[DEBUG]	
+2020-12-18 11:52:10,165	[INFO]	23	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 11:52:10,166	[INFO]	24	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 11:52:11,075	[INFO]	25	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 4)})
+2020-12-18 11:52:11,987	[INFO]	26	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 12), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0)})
+2020-12-18 11:52:15,354	[INFO]	27	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>='})
+2020-12-18 11:52:16,239	[INFO]	28	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 1), 'ingredient': ('java_programs/QUICKSORT.java.xml', 14)})
+2020-12-18 11:52:16,241	[INFO]	29	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 4)})
+2020-12-18 11:52:19,580	[INFO]	30	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '<'})
+2020-12-18 11:52:19,582	[INFO]	31	SUCCESS	+1.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 14), 'ingredient': ('java_programs/QUICKSORT.java.xml', 14)})
+2020-12-18 11:52:19,582	[DEBUG]	
+2020-12-18 11:52:22,978	[INFO]	32	SUCCESS	 13.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 14), 'ingredient': ('java_programs/QUICKSORT.java.xml', 14)}) | StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 5)})
+2020-12-18 11:52:22,979	[INFO]	33	SUCCESS	+1.0	
+2020-12-18 11:52:22,979	[DEBUG]	
+2020-12-18 11:52:23,864	[INFO]	34	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3), 'direction': 'before'})
+2020-12-18 11:52:23,865	[INFO]	35	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>'})
+2020-12-18 11:52:23,866	[INFO]	36	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'})
+2020-12-18 11:52:23,867	[DEBUG]	
+2020-12-18 11:52:23,867	[INFO]	37	SUCCESS	+1.0	
+2020-12-18 11:52:23,867	[DEBUG]	
+2020-12-18 11:52:27,318	[INFO]	38	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 6), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0), 'direction': 'before'})
+2020-12-18 11:52:27,318	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,26 ****
+--- 21,29 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
++             if (arr.isEmpty()) {
++             return new ArrayList<Integer>();
++         }
+              if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+
+2020-12-18 11:52:27,319	[INFO]	39	SUCCESS	+1.0	
+2020-12-18 11:52:27,319	[DEBUG]	
+2020-12-18 11:52:27,320	[INFO]	40	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'})
+2020-12-18 11:52:27,320	[DEBUG]	
+2020-12-18 11:52:27,321	[INFO]	41	SUCCESS	+1.0	
+2020-12-18 11:52:27,321	[DEBUG]	
+2020-12-18 11:52:30,625	[INFO]	42	SUCCESS	 13.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 1), 'ingredient': ('java_programs/QUICKSORT.java.xml', 12)})
+2020-12-18 11:52:31,525	[INFO]	43	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 11), 'direction': 'before'})
+2020-12-18 11:52:32,472	[INFO]	44	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 3), 'ingredient': ('java_programs/QUICKSORT.java.xml', 18), 'direction': 'before'})
+2020-12-18 11:52:33,214	[INFO]	45	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 6), 'ingredient': ('java_programs/QUICKSORT.java.xml', 1)})
+2020-12-18 11:52:34,104	[INFO]	46	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 13), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 11:52:35,003	[INFO]	47	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 12)})
+2020-12-18 11:52:35,005	[INFO]	48	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>'})
+2020-12-18 11:52:35,006	[DEBUG]	
+2020-12-18 11:52:35,007	[INFO]	49	SUCCESS	+1.0	
+2020-12-18 11:52:35,007	[DEBUG]	
+2020-12-18 11:52:35,911	[INFO]	50	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 12), 'ingredient': ('java_programs/QUICKSORT.java.xml', 18), 'direction': 'before'})
+2020-12-18 11:52:39,303	[INFO]	51	SUCCESS	*0.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 11:52:39,305	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 11:52:39,306	[INFO]	==== END ====
+2020-12-18 11:52:39,306	[INFO]	Reason: target fitness reached
+2020-12-18 11:52:39,308	[INFO]	
+2020-12-18 11:52:39,309	[INFO]	========== EPOCH 6 ==========
+2020-12-18 11:52:39,310	[INFO]	==== WARMUP ====
+2020-12-18 11:52:42,785	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:52:42,785	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:52:46,166	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:52:46,167	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:52:49,538	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:52:49,538	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:52:52,937	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 11:52:52,938	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:52:52,938	[INFO]	==== START ====
+2020-12-18 11:52:53,850	[INFO]	1	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 0), 'ingredient': ('java_programs/QUICKSORT.java.xml', 11), 'direction': 'before'})
+2020-12-18 11:52:57,233	[INFO]	2	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15), 'direction': 'before'})
+2020-12-18 11:52:57,234	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 31,36 ****
+--- 31,37 ----
+          middle.add(pivot);
+          lesser = quicksort(lesser);
+          greater = quicksort(greater);
++         greater = quicksort(greater);
+          middle.addAll(greater);
+          lesser.addAll(middle);
+          return lesser;
+
+2020-12-18 11:52:57,234	[INFO]	3	SUCCESS	+1.0	
+2020-12-18 11:52:57,235	[DEBUG]	
+2020-12-18 11:53:00,607	[INFO]	4	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 11), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15), 'direction': 'before'})
+2020-12-18 11:53:00,608	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 24,29 ****
+--- 24,30 ----
+              if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
++                 greater = quicksort(greater);
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 11:53:00,608	[INFO]	5	SUCCESS	+1.0	
+2020-12-18 11:53:00,609	[DEBUG]	
+2020-12-18 11:53:01,527	[INFO]	6	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 12), 'ingredient': ('java_programs/QUICKSORT.java.xml', 16), 'direction': 'before'})
+2020-12-18 11:53:04,903	[INFO]	7	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>'})
+2020-12-18 11:53:08,195	[INFO]	8	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 5)})
+2020-12-18 11:53:09,076	[INFO]	9	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 5), 'ingredient': ('java_programs/QUICKSORT.java.xml', 16)})
+2020-12-18 11:53:10,010	[INFO]	10	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 3), 'ingredient': ('java_programs/QUICKSORT.java.xml', 1)})
+2020-12-18 11:53:10,955	[INFO]	11	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 11:53:10,957	[INFO]	12	SUCCESS	+1.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15)})
+2020-12-18 11:53:10,958	[DEBUG]	
+2020-12-18 11:53:10,959	[INFO]	13	SUCCESS	+1.0	
+2020-12-18 11:53:10,960	[DEBUG]	
+2020-12-18 11:53:14,364	[INFO]	14	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 14), 'direction': 'before'})
+2020-12-18 11:53:14,366	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 30,35 ****
+--- 30,36 ----
+          ArrayList<Integer> middle = new ArrayList<Integer>();
+          middle.add(pivot);
+          lesser = quicksort(lesser);
++         lesser = quicksort(lesser);
+          greater = quicksort(greater);
+          middle.addAll(greater);
+          lesser.addAll(middle);
+
+2020-12-18 11:53:14,367	[INFO]	15	SUCCESS	+1.0	
+2020-12-18 11:53:14,367	[DEBUG]	
+2020-12-18 11:53:15,249	[INFO]	16	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 1), 'ingredient': ('java_programs/QUICKSORT.java.xml', 6), 'direction': 'before'})
+2020-12-18 11:53:18,584	[INFO]	17	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 17)})
+2020-12-18 11:53:19,463	[INFO]	18	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 3), 'ingredient': ('java_programs/QUICKSORT.java.xml', 12), 'direction': 'before'})
+2020-12-18 11:53:22,847	[INFO]	19	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '=='})
+2020-12-18 11:53:23,754	[INFO]	20	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 2), 'direction': 'before'})
+2020-12-18 11:53:24,677	[INFO]	21	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 13), 'ingredient': ('java_programs/QUICKSORT.java.xml', 1)})
+2020-12-18 11:53:25,601	[INFO]	22	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 12)})
+2020-12-18 11:53:29,064	[INFO]	23	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '<'})
+2020-12-18 11:53:32,514	[INFO]	24	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 16)})
+2020-12-18 11:53:35,894	[INFO]	25	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '<='})
+2020-12-18 11:53:35,899	[INFO]	26	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'})
+2020-12-18 11:53:35,900	[DEBUG]	
+2020-12-18 11:53:35,902	[INFO]	27	SUCCESS	+1.0	
+2020-12-18 11:53:35,902	[DEBUG]	
+2020-12-18 11:53:35,904	[INFO]	28	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 11:53:36,839	[INFO]	29	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 8), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5)})
+2020-12-18 11:53:40,203	[INFO]	30	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='})
+2020-12-18 11:53:40,204	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x != pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 11:53:41,146	[INFO]	31	PARSE_ERROR	 None	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='}) | StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 14), 'ingredient': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 11:53:41,147	[INFO]	32	SUCCESS	+1.0	
+2020-12-18 11:53:41,147	[DEBUG]	
+2020-12-18 11:53:41,148	[INFO]	33	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 11:53:44,511	[INFO]	34	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 11:53:45,438	[INFO]	35	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 11), 'direction': 'before'})
+2020-12-18 11:53:46,386	[INFO]	36	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 4)})
+2020-12-18 11:53:46,389	[INFO]	37	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 11:53:49,851	[INFO]	38	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '!='})
+2020-12-18 11:53:50,594	[INFO]	39	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 6)})
+2020-12-18 11:53:51,480	[INFO]	40	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 11), 'ingredient': ('java_programs/QUICKSORT.java.xml', 17)})
+2020-12-18 11:53:52,420	[INFO]	41	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 9), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 11:53:55,953	[INFO]	42	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 13)})
+2020-12-18 11:53:56,850	[INFO]	43	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 1)})
+2020-12-18 11:54:00,204	[INFO]	44	SUCCESS	*0.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>='})
+2020-12-18 11:54:00,204	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x >= pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 11:54:00,205	[INFO]	==== END ====
+2020-12-18 11:54:00,205	[INFO]	Reason: target fitness reached
+2020-12-18 11:54:00,205	[INFO]	
+2020-12-18 11:54:00,205	[INFO]	========== EPOCH 7 ==========
+2020-12-18 11:54:00,206	[INFO]	==== WARMUP ====
+2020-12-18 11:54:03,708	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:54:03,709	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:54:07,019	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:54:07,019	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:54:10,425	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:54:10,426	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:54:13,749	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 11:54:13,749	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:54:13,749	[INFO]	==== START ====
+2020-12-18 11:54:14,661	[INFO]	1	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 0), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 11:54:18,073	[INFO]	2	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 11:54:18,970	[INFO]	3	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 14), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 11:54:19,886	[INFO]	4	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 13), 'ingredient': ('java_programs/QUICKSORT.java.xml', 8), 'direction': 'before'})
+2020-12-18 11:54:20,809	[INFO]	5	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 4), 'direction': 'before'})
+2020-12-18 11:54:21,669	[INFO]	6	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 5), 'ingredient': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 11:54:25,072	[INFO]	7	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>='})
+2020-12-18 11:54:28,412	[INFO]	8	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15), 'direction': 'before'})
+2020-12-18 11:54:28,413	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 31,36 ****
+--- 31,37 ----
+          middle.add(pivot);
+          lesser = quicksort(lesser);
+          greater = quicksort(greater);
++         greater = quicksort(greater);
+          middle.addAll(greater);
+          lesser.addAll(middle);
+          return lesser;
+
+2020-12-18 11:54:29,330	[INFO]	9	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15), 'direction': 'before'}) | StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 1), 'ingredient': ('java_programs/QUICKSORT.java.xml', 13)})
+2020-12-18 11:54:30,260	[INFO]	10	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15), 'direction': 'before'}) | MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 11), 'direction': 'before'})
+2020-12-18 11:54:33,796	[INFO]	11	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15), 'direction': 'before'}) | ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='})
+2020-12-18 11:54:33,797	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x != pivot) {
+                  greater.add(x);
+              }
+          }
+***************
+*** 31,36 ****
+--- 31,37 ----
+          middle.add(pivot);
+          lesser = quicksort(lesser);
+          greater = quicksort(greater);
++         greater = quicksort(greater);
+          middle.addAll(greater);
+          lesser.addAll(middle);
+          return lesser;
+
+2020-12-18 11:54:34,681	[INFO]	12	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15), 'direction': 'before'}) | ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='}) | StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 0), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5)})
+2020-12-18 11:54:34,684	[INFO]	13	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15), 'direction': 'before'})
+2020-12-18 11:54:34,685	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 31,36 ****
+--- 31,37 ----
+          middle.add(pivot);
+          lesser = quicksort(lesser);
+          greater = quicksort(greater);
++         greater = quicksort(greater);
+          middle.addAll(greater);
+          lesser.addAll(middle);
+          return lesser;
+
+2020-12-18 11:54:35,593	[INFO]	14	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15), 'direction': 'before'}) | StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 14), 'ingredient': ('java_programs/QUICKSORT.java.xml', 2)})
+2020-12-18 11:54:35,595	[INFO]	15	SUCCESS	+1.0	
+2020-12-18 11:54:35,595	[DEBUG]	
+2020-12-18 11:54:38,958	[INFO]	16	SUCCESS	*0.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 11:54:38,959	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 11:54:38,960	[INFO]	==== END ====
+2020-12-18 11:54:38,960	[INFO]	Reason: target fitness reached
+2020-12-18 11:54:38,961	[INFO]	
+2020-12-18 11:54:38,961	[INFO]	========== EPOCH 8 ==========
+2020-12-18 11:54:38,962	[INFO]	==== WARMUP ====
+2020-12-18 11:54:42,408	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:54:42,408	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:54:45,668	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:54:45,669	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:54:49,011	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:54:49,012	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:54:52,348	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 11:54:52,348	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:54:52,349	[INFO]	==== START ====
+2020-12-18 11:54:55,688	[INFO]	1	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 13)})
+2020-12-18 11:54:56,596	[INFO]	2	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 0), 'ingredient': ('java_programs/QUICKSORT.java.xml', 12)})
+2020-12-18 11:54:59,997	[INFO]	3	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 12), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0), 'direction': 'before'})
+2020-12-18 11:54:59,998	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 27,32 ****
+--- 27,35 ----
+                  greater.add(x);
+              }
+          }
++         if (arr.isEmpty()) {
++             return new ArrayList<Integer>();
++         }
+          ArrayList<Integer> middle = new ArrayList<Integer>();
+          middle.add(pivot);
+          lesser = quicksort(lesser);
+
+2020-12-18 11:55:00,904	[INFO]	4	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 12), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0), 'direction': 'before'}) | MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 18), 'direction': 'before'})
+2020-12-18 11:55:00,905	[INFO]	5	SUCCESS	+1.0	
+2020-12-18 11:55:00,905	[DEBUG]	
+2020-12-18 11:55:04,336	[INFO]	6	SUCCESS	 12.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 11), 'ingredient': ('java_programs/QUICKSORT.java.xml', 8), 'direction': 'before'})
+2020-12-18 11:55:05,206	[INFO]	7	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 2)})
+2020-12-18 11:55:06,095	[INFO]	8	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 5), 'ingredient': ('java_programs/QUICKSORT.java.xml', 13), 'direction': 'before'})
+2020-12-18 11:55:09,507	[INFO]	9	SUCCESS	*0.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 11:55:09,508	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 11:55:09,508	[INFO]	==== END ====
+2020-12-18 11:55:09,509	[INFO]	Reason: target fitness reached
+2020-12-18 11:55:09,509	[INFO]	
+2020-12-18 11:55:09,509	[INFO]	========== EPOCH 9 ==========
+2020-12-18 11:55:09,510	[INFO]	==== WARMUP ====
+2020-12-18 11:55:12,947	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:55:12,947	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:55:16,360	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:55:16,360	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:55:19,635	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:55:19,635	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:55:22,998	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 11:55:22,998	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:55:22,998	[INFO]	==== START ====
+2020-12-18 11:55:26,475	[INFO]	1	SUCCESS	 13.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5), 'direction': 'before'})
+2020-12-18 11:55:27,233	[INFO]	2	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 6)})
+2020-12-18 11:55:30,572	[INFO]	3	SUCCESS	 13.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 17), 'direction': 'before'})
+2020-12-18 11:55:33,965	[INFO]	4	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 0)})
+2020-12-18 11:55:37,436	[INFO]	5	SUCCESS	 12.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 13), 'ingredient': ('java_programs/QUICKSORT.java.xml', 16), 'direction': 'before'})
+2020-12-18 11:55:38,337	[INFO]	6	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 2)})
+2020-12-18 11:55:39,300	[INFO]	7	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 6)})
+2020-12-18 11:55:40,233	[INFO]	8	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 3), 'ingredient': ('java_programs/QUICKSORT.java.xml', 14)})
+2020-12-18 11:55:41,184	[INFO]	9	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 18), 'ingredient': ('java_programs/QUICKSORT.java.xml', 13)})
+2020-12-18 11:55:42,113	[INFO]	10	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3), 'direction': 'before'})
+2020-12-18 11:55:43,072	[INFO]	11	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 18), 'ingredient': ('java_programs/QUICKSORT.java.xml', 12), 'direction': 'before'})
+2020-12-18 11:55:43,073	[INFO]	12	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'})
+2020-12-18 11:55:43,073	[DEBUG]	
+2020-12-18 11:55:46,423	[INFO]	13	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'}) | ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '=='})
+2020-12-18 11:55:46,424	[INFO]	14	SUCCESS	+1.0	
+2020-12-18 11:55:46,424	[DEBUG]	
+2020-12-18 11:55:49,789	[INFO]	15	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 14)})
+2020-12-18 11:55:53,159	[INFO]	16	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '<='})
+2020-12-18 11:55:54,065	[INFO]	17	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 18), 'ingredient': ('java_programs/QUICKSORT.java.xml', 11), 'direction': 'before'})
+2020-12-18 11:55:54,967	[INFO]	18	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 18)})
+2020-12-18 11:55:54,969	[INFO]	19	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 0)})
+2020-12-18 11:55:55,913	[INFO]	20	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 18), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15)})
+2020-12-18 11:55:56,825	[INFO]	21	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 1)})
+2020-12-18 11:55:57,752	[INFO]	22	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 12), 'ingredient': ('java_programs/QUICKSORT.java.xml', 4), 'direction': 'before'})
+2020-12-18 11:55:58,647	[INFO]	23	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 9), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 11:56:01,935	[INFO]	24	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>'})
+2020-12-18 11:56:01,937	[INFO]	25	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '<='})
+2020-12-18 11:56:05,339	[INFO]	26	SUCCESS	 9.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 14)})
+2020-12-18 11:56:06,224	[INFO]	27	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 12), 'ingredient': ('java_programs/QUICKSORT.java.xml', 11), 'direction': 'before'})
+2020-12-18 11:56:09,538	[INFO]	28	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 9)})
+2020-12-18 11:56:10,445	[INFO]	29	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 12), 'ingredient': ('java_programs/QUICKSORT.java.xml', 18)})
+2020-12-18 11:56:11,371	[INFO]	30	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 2), 'ingredient': ('java_programs/QUICKSORT.java.xml', 6)})
+2020-12-18 11:56:12,276	[INFO]	31	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 12), 'direction': 'before'})
+2020-12-18 11:56:15,713	[INFO]	32	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '!='})
+2020-12-18 11:56:15,715	[INFO]	33	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '!='})
+2020-12-18 11:56:16,607	[INFO]	34	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 2)})
+2020-12-18 11:56:17,526	[INFO]	35	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 2), 'ingredient': ('java_programs/QUICKSORT.java.xml', 13), 'direction': 'before'})
+2020-12-18 11:56:20,955	[INFO]	36	SUCCESS	 12.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 9), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0)})
+2020-12-18 11:56:21,855	[INFO]	37	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 11:56:25,176	[INFO]	38	SUCCESS	*0.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 11:56:25,177	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 11:56:25,178	[INFO]	==== END ====
+2020-12-18 11:56:25,178	[INFO]	Reason: target fitness reached
+2020-12-18 11:56:25,179	[INFO]	
+2020-12-18 11:56:25,179	[INFO]	========== EPOCH 10 ==========
+2020-12-18 11:56:25,179	[INFO]	==== WARMUP ====
+2020-12-18 11:56:28,529	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:56:28,529	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:56:31,845	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:56:31,846	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:56:35,250	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:56:35,250	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:56:38,617	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 11:56:38,618	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:56:38,618	[INFO]	==== START ====
+2020-12-18 11:56:42,136	[INFO]	1	SUCCESS	*0.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>='})
+2020-12-18 11:56:42,136	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x >= pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 11:56:42,137	[INFO]	==== END ====
+2020-12-18 11:56:42,137	[INFO]	Reason: target fitness reached
+2020-12-18 11:56:42,137	[INFO]	
+2020-12-18 11:56:42,138	[INFO]	========== EPOCH 11 ==========
+2020-12-18 11:56:42,138	[INFO]	==== WARMUP ====
+2020-12-18 11:56:45,502	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:56:45,502	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:56:48,857	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:56:48,857	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:56:52,188	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:56:52,188	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:56:55,501	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 11:56:55,501	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:56:55,502	[INFO]	==== START ====
+2020-12-18 11:56:56,421	[INFO]	1	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 3), 'ingredient': ('java_programs/QUICKSORT.java.xml', 14)})
+2020-12-18 11:56:59,757	[INFO]	2	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>'})
+2020-12-18 11:57:00,642	[INFO]	3	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 0), 'ingredient': ('java_programs/QUICKSORT.java.xml', 6), 'direction': 'before'})
+2020-12-18 11:57:01,528	[INFO]	4	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 11:57:04,904	[INFO]	5	SUCCESS	 12.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 9), 'ingredient': ('java_programs/QUICKSORT.java.xml', 6)})
+2020-12-18 11:57:05,792	[INFO]	6	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 17)})
+2020-12-18 11:57:06,760	[INFO]	7	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 9)})
+2020-12-18 11:57:06,766	[INFO]	8	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>'})
+2020-12-18 11:57:10,162	[INFO]	9	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 11:57:13,516	[INFO]	10	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 13)})
+2020-12-18 11:57:14,266	[INFO]	11	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 6), 'ingredient': ('java_programs/QUICKSORT.java.xml', 8)})
+2020-12-18 11:57:15,196	[INFO]	12	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 11), 'ingredient': ('java_programs/QUICKSORT.java.xml', 9), 'direction': 'before'})
+2020-12-18 11:57:16,407	[INFO]	13	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 2), 'ingredient': ('java_programs/QUICKSORT.java.xml', 12)})
+2020-12-18 11:57:17,337	[INFO]	14	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 13), 'ingredient': ('java_programs/QUICKSORT.java.xml', 8), 'direction': 'before'})
+2020-12-18 11:57:17,340	[INFO]	15	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 11), 'ingredient': ('java_programs/QUICKSORT.java.xml', 9), 'direction': 'before'})
+2020-12-18 11:57:17,342	[INFO]	16	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 11:57:18,264	[INFO]	17	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15)})
+2020-12-18 11:57:19,162	[INFO]	18	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 18)})
+2020-12-18 11:57:20,103	[INFO]	19	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 12)})
+2020-12-18 11:57:23,490	[INFO]	20	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '!='})
+2020-12-18 11:57:24,373	[INFO]	21	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 0), 'ingredient': ('java_programs/QUICKSORT.java.xml', 18)})
+2020-12-18 11:57:27,612	[INFO]	22	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 1)})
+2020-12-18 11:57:28,364	[INFO]	23	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 6)})
+2020-12-18 11:57:29,282	[INFO]	24	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 18), 'ingredient': ('java_programs/QUICKSORT.java.xml', 4), 'direction': 'before'})
+2020-12-18 11:57:32,669	[INFO]	25	SUCCESS	 13.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 18), 'ingredient': ('java_programs/QUICKSORT.java.xml', 17), 'direction': 'before'})
+2020-12-18 11:57:33,592	[INFO]	26	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 12), 'ingredient': ('java_programs/QUICKSORT.java.xml', 2), 'direction': 'before'})
+2020-12-18 11:57:34,488	[INFO]	27	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 3), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3), 'direction': 'before'})
+2020-12-18 11:57:34,489	[INFO]	28	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>'})
+2020-12-18 11:57:34,490	[DEBUG]	
+2020-12-18 11:57:34,491	[INFO]	29	SUCCESS	+1.0	
+2020-12-18 11:57:34,491	[DEBUG]	
+2020-12-18 11:57:34,492	[INFO]	30	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 11:57:35,415	[INFO]	31	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 11), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3), 'direction': 'before'})
+2020-12-18 11:57:38,800	[INFO]	32	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 0)})
+2020-12-18 11:57:39,708	[INFO]	33	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 4), 'direction': 'before'})
+2020-12-18 11:57:43,044	[INFO]	34	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='})
+2020-12-18 11:57:43,044	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x != pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 11:57:43,045	[INFO]	35	SUCCESS	+1.0	
+2020-12-18 11:57:43,046	[DEBUG]	
+2020-12-18 11:57:43,936	[INFO]	36	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 5), 'ingredient': ('java_programs/QUICKSORT.java.xml', 17), 'direction': 'before'})
+2020-12-18 11:57:47,227	[INFO]	37	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '<='})
+2020-12-18 11:57:48,132	[INFO]	38	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 8), 'ingredient': ('java_programs/QUICKSORT.java.xml', 4), 'direction': 'before'})
+2020-12-18 11:57:48,135	[INFO]	39	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '!='})
+2020-12-18 11:57:48,136	[INFO]	40	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>'})
+2020-12-18 11:57:48,136	[DEBUG]	
+2020-12-18 11:57:48,137	[INFO]	41	SUCCESS	+1.0	
+2020-12-18 11:57:48,138	[DEBUG]	
+2020-12-18 11:57:48,139	[INFO]	42	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 11:57:51,492	[INFO]	43	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 17)})
+2020-12-18 11:57:54,799	[INFO]	44	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 5)})
+2020-12-18 11:57:58,188	[INFO]	45	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 11), 'ingredient': ('java_programs/QUICKSORT.java.xml', 12), 'direction': 'before'})
+2020-12-18 11:57:58,190	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 24,29 ****
+--- 24,30 ----
+              if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
++                 ArrayList<Integer> middle = new ArrayList<Integer>();
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 11:58:01,627	[INFO]	46	SUCCESS	 13.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 11), 'ingredient': ('java_programs/QUICKSORT.java.xml', 12), 'direction': 'before'}) | ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>='})
+2020-12-18 11:58:01,628	[INFO]	47	SUCCESS	+1.0	
+2020-12-18 11:58:01,628	[DEBUG]	
+2020-12-18 11:58:02,524	[INFO]	48	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 2), 'ingredient': ('java_programs/QUICKSORT.java.xml', 8), 'direction': 'before'})
+2020-12-18 11:58:03,420	[INFO]	49	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 8), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 11:58:03,423	[INFO]	50	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 1)})
+2020-12-18 11:58:06,815	[INFO]	51	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 14), 'direction': 'before'})
+2020-12-18 11:58:06,816	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 30,35 ****
+--- 30,36 ----
+          ArrayList<Integer> middle = new ArrayList<Integer>();
+          middle.add(pivot);
+          lesser = quicksort(lesser);
++         lesser = quicksort(lesser);
+          greater = quicksort(greater);
+          middle.addAll(greater);
+          lesser.addAll(middle);
+
+2020-12-18 11:58:10,218	[INFO]	52	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 14), 'direction': 'before'}) | ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='})
+2020-12-18 11:58:10,219	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,34 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+          ArrayList<Integer> middle = new ArrayList<Integer>();
+          middle.add(pivot);
+          lesser = quicksort(lesser);
+          greater = quicksort(greater);
+          middle.addAll(greater);
+--- 23,35 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x != pivot) {
+                  greater.add(x);
+              }
+          }
+          ArrayList<Integer> middle = new ArrayList<Integer>();
+          middle.add(pivot);
++         lesser = quicksort(lesser);
+          lesser = quicksort(lesser);
+          greater = quicksort(greater);
+          middle.addAll(greater);
+
+2020-12-18 11:58:11,119	[INFO]	53	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 14), 'direction': 'before'}) | ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='}) | StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 2)})
+2020-12-18 11:58:11,121	[INFO]	54	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='})
+2020-12-18 11:58:11,121	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x != pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 11:58:11,122	[INFO]	55	SUCCESS	+1.0	
+2020-12-18 11:58:11,122	[DEBUG]	
+2020-12-18 11:58:11,123	[INFO]	56	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '!='})
+2020-12-18 11:58:12,035	[INFO]	57	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 0), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3), 'direction': 'before'})
+2020-12-18 11:58:12,973	[INFO]	58	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 9), 'ingredient': ('java_programs/QUICKSORT.java.xml', 13)})
+2020-12-18 11:58:16,392	[INFO]	59	SUCCESS	*0.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 11:58:16,393	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 11:58:16,393	[INFO]	==== END ====
+2020-12-18 11:58:16,393	[INFO]	Reason: target fitness reached
+2020-12-18 11:58:16,394	[INFO]	
+2020-12-18 11:58:16,394	[INFO]	========== EPOCH 12 ==========
+2020-12-18 11:58:16,394	[INFO]	==== WARMUP ====
+2020-12-18 11:58:19,753	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:58:19,753	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:58:23,106	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:58:23,106	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:58:26,482	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:58:26,482	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:58:30,511	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 11:58:30,512	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:58:30,512	[INFO]	==== START ====
+2020-12-18 11:58:31,857	[INFO]	1	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 4)})
+2020-12-18 11:58:36,019	[INFO]	2	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '=='})
+2020-12-18 11:58:36,021	[INFO]	3	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>'})
+2020-12-18 11:58:36,021	[DEBUG]	
+2020-12-18 11:58:39,498	[INFO]	4	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>'}) | StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 14)})
+2020-12-18 11:58:40,215	[INFO]	5	PARSE_ERROR	 None	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>'}) | StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 6)})
+2020-12-18 11:58:40,216	[INFO]	6	SUCCESS	+1.0	
+2020-12-18 11:58:40,216	[DEBUG]	
+2020-12-18 11:58:43,726	[INFO]	7	SUCCESS	 13.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 8), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15)})
+2020-12-18 11:58:47,228	[INFO]	8	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='})
+2020-12-18 11:58:47,230	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x != pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 11:58:48,108	[INFO]	9	PARSE_ERROR	 None	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='}) | StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 18), 'ingredient': ('java_programs/QUICKSORT.java.xml', 2)})
+2020-12-18 11:58:48,109	[INFO]	10	SUCCESS	+1.0	
+2020-12-18 11:58:48,110	[DEBUG]	
+2020-12-18 11:58:51,384	[INFO]	11	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 11:58:52,302	[INFO]	12	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 11:58:55,645	[INFO]	13	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 0)})
+2020-12-18 11:58:56,580	[INFO]	14	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 9), 'ingredient': ('java_programs/QUICKSORT.java.xml', 13)})
+2020-12-18 11:58:57,486	[INFO]	15	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 9), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5)})
+2020-12-18 11:58:57,488	[INFO]	16	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 4)})
+2020-12-18 11:59:00,782	[INFO]	17	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 17)})
+2020-12-18 11:59:04,100	[INFO]	18	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 5), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5), 'direction': 'before'})
+2020-12-18 11:59:04,101	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 27,32 ****
+--- 27,40 ----
+                  greater.add(x);
+              }
+          }
++ 
++         for (Integer x : arr.subList(1, arr.size())) {
++             if (x < pivot) {
++                 lesser.add(x);
++             } else if (x > pivot) {
++                 greater.add(x);
++             }
++         }
+          ArrayList<Integer> middle = new ArrayList<Integer>();
+          middle.add(pivot);
+          lesser = quicksort(lesser);
+
+2020-12-18 11:59:04,102	[INFO]	19	SUCCESS	+1.0	
+2020-12-18 11:59:04,102	[DEBUG]	
+2020-12-18 11:59:07,489	[INFO]	20	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>='})
+2020-12-18 11:59:10,820	[INFO]	21	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 16)})
+2020-12-18 11:59:11,733	[INFO]	22	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 2), 'direction': 'before'})
+2020-12-18 11:59:15,158	[INFO]	23	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0), 'direction': 'before'})
+2020-12-18 11:59:15,159	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 31,36 ****
+--- 31,39 ----
+          middle.add(pivot);
+          lesser = quicksort(lesser);
+          greater = quicksort(greater);
++         if (arr.isEmpty()) {
++             return new ArrayList<Integer>();
++         }
+          middle.addAll(greater);
+          lesser.addAll(middle);
+          return lesser;
+
+2020-12-18 11:59:18,572	[INFO]	24	SUCCESS	 13.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0), 'direction': 'before'}) | StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5)})
+2020-12-18 11:59:18,573	[INFO]	25	SUCCESS	+1.0	
+2020-12-18 11:59:18,574	[DEBUG]	
+2020-12-18 11:59:21,906	[INFO]	26	SUCCESS	*0.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 11:59:21,907	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 11:59:21,907	[INFO]	==== END ====
+2020-12-18 11:59:21,907	[INFO]	Reason: target fitness reached
+2020-12-18 11:59:21,908	[INFO]	
+2020-12-18 11:59:21,908	[INFO]	========== EPOCH 13 ==========
+2020-12-18 11:59:21,908	[INFO]	==== WARMUP ====
+2020-12-18 11:59:25,348	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:59:25,349	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:59:28,657	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:59:28,657	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:59:32,105	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 11:59:32,105	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:59:35,477	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 11:59:35,477	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 11:59:35,477	[INFO]	==== START ====
+2020-12-18 11:59:38,821	[INFO]	1	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 11:59:42,275	[INFO]	2	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 18), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0), 'direction': 'before'})
+2020-12-18 11:59:42,276	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 33,38 ****
+--- 33,41 ----
+          greater = quicksort(greater);
+          middle.addAll(greater);
+          lesser.addAll(middle);
++         if (arr.isEmpty()) {
++             return new ArrayList<Integer>();
++         }
+          return lesser;
+  
+      }
+
+2020-12-18 11:59:45,662	[INFO]	3	SUCCESS	 12.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 18), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0), 'direction': 'before'}) | StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 11:59:48,941	[INFO]	4	SUCCESS	 13.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 18), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0), 'direction': 'before'}) | StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 1), 'ingredient': ('java_programs/QUICKSORT.java.xml', 2)})
+2020-12-18 11:59:48,942	[INFO]	5	SUCCESS	+1.0	
+2020-12-18 11:59:48,942	[DEBUG]	
+2020-12-18 11:59:52,269	[INFO]	6	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '<'})
+2020-12-18 11:59:55,614	[INFO]	7	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='})
+2020-12-18 11:59:55,615	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x != pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 11:59:55,616	[INFO]	8	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='}) | ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='})
+2020-12-18 11:59:55,616	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x != pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 11:59:55,617	[INFO]	9	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='})
+2020-12-18 11:59:55,617	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x != pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 11:59:55,618	[INFO]	10	SUCCESS	+1.0	
+2020-12-18 11:59:55,618	[DEBUG]	
+2020-12-18 11:59:59,029	[INFO]	11	SUCCESS	 9.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 15)})
+2020-12-18 12:00:02,458	[INFO]	12	SUCCESS	 13.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 6), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0)})
+2020-12-18 12:00:03,178	[INFO]	13	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 6)})
+2020-12-18 12:00:03,179	[INFO]	14	SUCCESS	+1.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 4)})
+2020-12-18 12:00:03,180	[DEBUG]	
+2020-12-18 12:00:03,180	[INFO]	15	SUCCESS	+1.0	
+2020-12-18 12:00:03,180	[DEBUG]	
+2020-12-18 12:00:04,095	[INFO]	16	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 8), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 12:00:07,460	[INFO]	17	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>'})
+2020-12-18 12:00:08,206	[INFO]	18	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 6), 'ingredient': ('java_programs/QUICKSORT.java.xml', 8)})
+2020-12-18 12:00:08,208	[INFO]	19	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>'})
+2020-12-18 12:00:11,596	[INFO]	20	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '=='})
+2020-12-18 12:00:11,597	[INFO]	21	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 6)})
+2020-12-18 12:00:14,933	[INFO]	22	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '!='})
+2020-12-18 12:00:15,692	[INFO]	23	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 6), 'ingredient': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 12:00:19,088	[INFO]	24	SUCCESS	*0.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 12:00:19,089	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 12:00:19,090	[INFO]	==== END ====
+2020-12-18 12:00:19,090	[INFO]	Reason: target fitness reached
+2020-12-18 12:00:19,090	[INFO]	
+2020-12-18 12:00:19,090	[INFO]	========== EPOCH 14 ==========
+2020-12-18 12:00:19,091	[INFO]	==== WARMUP ====
+2020-12-18 12:00:22,512	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:00:22,512	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:00:25,875	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:00:25,875	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:00:29,297	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:00:29,297	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:00:32,721	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 12:00:32,722	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:00:32,722	[INFO]	==== START ====
+2020-12-18 12:00:36,441	[INFO]	1	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 13)})
+2020-12-18 12:00:40,450	[INFO]	2	SUCCESS	 12.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 16), 'direction': 'before'})
+2020-12-18 12:00:43,783	[INFO]	3	SUCCESS	*0.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>='})
+2020-12-18 12:00:43,783	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x >= pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 12:00:43,784	[INFO]	==== END ====
+2020-12-18 12:00:43,784	[INFO]	Reason: target fitness reached
+2020-12-18 12:00:43,784	[INFO]	
+2020-12-18 12:00:43,785	[INFO]	========== EPOCH 15 ==========
+2020-12-18 12:00:43,785	[INFO]	==== WARMUP ====
+2020-12-18 12:00:47,138	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:00:47,138	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:00:50,439	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:00:50,439	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:00:53,808	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:00:53,809	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:00:57,216	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 12:00:57,217	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:00:57,217	[INFO]	==== START ====
+2020-12-18 12:00:58,093	[INFO]	1	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 13)})
+2020-12-18 12:00:58,838	[INFO]	2	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 6)})
+2020-12-18 12:00:59,800	[INFO]	3	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 6), 'ingredient': ('java_programs/QUICKSORT.java.xml', 2), 'direction': 'before'})
+2020-12-18 12:01:03,313	[INFO]	4	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>'})
+2020-12-18 12:01:06,622	[INFO]	5	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='})
+2020-12-18 12:01:06,623	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x != pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 12:01:09,955	[INFO]	6	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='}) | ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '=='})
+2020-12-18 12:01:09,956	[INFO]	7	SUCCESS	+1.0	
+2020-12-18 12:01:09,956	[DEBUG]	
+2020-12-18 12:01:09,957	[INFO]	8	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'})
+2020-12-18 12:01:09,957	[DEBUG]	
+2020-12-18 12:01:10,699	[INFO]	9	PARSE_ERROR	 None	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'}) | StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 6), 'ingredient': ('java_programs/QUICKSORT.java.xml', 8)})
+2020-12-18 12:01:11,606	[INFO]	10	PARSE_ERROR	 None	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'}) | StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 12:01:12,530	[INFO]	11	PARSE_ERROR	 None	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'}) | MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 2), 'direction': 'before'})
+2020-12-18 12:01:12,533	[INFO]	12	SUCCESS	+1.0	
+2020-12-18 12:01:12,534	[DEBUG]	
+2020-12-18 12:01:12,537	[INFO]	13	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'})
+2020-12-18 12:01:12,538	[DEBUG]	
+2020-12-18 12:01:13,441	[INFO]	14	PARSE_ERROR	 None	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'}) | MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 8), 'ingredient': ('java_programs/QUICKSORT.java.xml', 13), 'direction': 'before'})
+2020-12-18 12:01:14,334	[INFO]	15	PARSE_ERROR	 None	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'}) | StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 12)})
+2020-12-18 12:01:17,720	[INFO]	16	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'}) | ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>='})
+2020-12-18 12:01:17,721	[INFO]	17	SUCCESS	+1.0	
+2020-12-18 12:01:17,722	[DEBUG]	
+2020-12-18 12:01:21,129	[INFO]	18	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '!='})
+2020-12-18 12:01:22,032	[INFO]	19	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 0), 'ingredient': ('java_programs/QUICKSORT.java.xml', 16), 'direction': 'before'})
+2020-12-18 12:01:22,945	[INFO]	20	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 8), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5), 'direction': 'before'})
+2020-12-18 12:01:22,947	[INFO]	21	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='})
+2020-12-18 12:01:22,947	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x != pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 12:01:22,948	[INFO]	22	SUCCESS	+1.0	
+2020-12-18 12:01:22,948	[DEBUG]	
+2020-12-18 12:01:22,949	[INFO]	23	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>'})
+2020-12-18 12:01:26,274	[INFO]	24	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 5)})
+2020-12-18 12:01:27,160	[INFO]	25	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 18), 'ingredient': ('java_programs/QUICKSORT.java.xml', 12)})
+2020-12-18 12:01:27,162	[INFO]	26	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>'})
+2020-12-18 12:01:27,162	[DEBUG]	
+2020-12-18 12:01:30,618	[INFO]	27	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>'}) | StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 8), 'ingredient': ('java_programs/QUICKSORT.java.xml', 18)})
+2020-12-18 12:01:30,619	[INFO]	28	SUCCESS	+1.0	
+2020-12-18 12:01:30,619	[DEBUG]	
+2020-12-18 12:01:34,013	[INFO]	29	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 1), 'ingredient': ('java_programs/QUICKSORT.java.xml', 4), 'direction': 'before'})
+2020-12-18 12:01:34,014	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 13,18 ****
+--- 13,19 ----
+  public class QUICKSORT {
+      public static ArrayList<Integer> quicksort(ArrayList<Integer> arr) {
+          if (arr.isEmpty()) {
++             ArrayList<Integer> greater = new ArrayList<Integer>();
+              return new ArrayList<Integer>();
+          }
+  
+
+2020-12-18 12:01:34,015	[INFO]	30	SUCCESS	+1.0	
+2020-12-18 12:01:34,015	[DEBUG]	
+2020-12-18 12:01:37,355	[INFO]	31	SUCCESS	 13.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 8), 'ingredient': ('java_programs/QUICKSORT.java.xml', 1)})
+2020-12-18 12:01:40,811	[INFO]	32	SUCCESS	 13.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 14), 'ingredient': ('java_programs/QUICKSORT.java.xml', 16)})
+2020-12-18 12:01:41,746	[INFO]	33	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 2), 'ingredient': ('java_programs/QUICKSORT.java.xml', 4)})
+2020-12-18 12:01:45,266	[INFO]	34	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '<'})
+2020-12-18 12:01:48,703	[INFO]	35	SUCCESS	 13.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 8), 'ingredient': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 12:01:48,706	[INFO]	36	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='})
+2020-12-18 12:01:48,707	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x != pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 12:01:48,708	[INFO]	37	SUCCESS	+1.0	
+2020-12-18 12:01:48,708	[DEBUG]	
+2020-12-18 12:01:49,624	[INFO]	38	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 0), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 12:01:52,942	[INFO]	39	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 13)})
+2020-12-18 12:01:53,882	[INFO]	40	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 2)})
+2020-12-18 12:01:54,773	[INFO]	41	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 2), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15)})
+2020-12-18 12:01:58,193	[INFO]	42	SUCCESS	*0.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>='})
+2020-12-18 12:01:58,194	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x >= pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 12:01:58,194	[INFO]	==== END ====
+2020-12-18 12:01:58,194	[INFO]	Reason: target fitness reached
+2020-12-18 12:01:58,195	[INFO]	
+2020-12-18 12:01:58,195	[INFO]	========== EPOCH 16 ==========
+2020-12-18 12:01:58,196	[INFO]	==== WARMUP ====
+2020-12-18 12:02:01,540	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:02:01,540	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:02:04,876	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:02:04,877	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:02:08,275	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:02:08,275	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:02:11,632	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 12:02:11,632	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:02:11,632	[INFO]	==== START ====
+2020-12-18 12:02:15,051	[INFO]	1	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '<='})
+2020-12-18 12:02:15,768	[INFO]	2	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 6)})
+2020-12-18 12:02:19,121	[INFO]	3	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '<'})
+2020-12-18 12:02:22,508	[INFO]	4	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 14), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0), 'direction': 'before'})
+2020-12-18 12:02:22,509	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 29,34 ****
+--- 29,37 ----
+          }
+          ArrayList<Integer> middle = new ArrayList<Integer>();
+          middle.add(pivot);
++         if (arr.isEmpty()) {
++             return new ArrayList<Integer>();
++         }
+          lesser = quicksort(lesser);
+          greater = quicksort(greater);
+          middle.addAll(greater);
+
+2020-12-18 12:02:23,258	[INFO]	5	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 14), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0), 'direction': 'before'}) | MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 9), 'ingredient': ('java_programs/QUICKSORT.java.xml', 13), 'direction': 'before'})
+2020-12-18 12:02:23,261	[INFO]	6	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 14), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0), 'direction': 'before'}) | MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5), 'direction': 'before'})
+2020-12-18 12:02:23,262	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 29,34 ****
+--- 29,37 ----
+          }
+          ArrayList<Integer> middle = new ArrayList<Integer>();
+          middle.add(pivot);
++         if (arr.isEmpty()) {
++             return new ArrayList<Integer>();
++         }
+          lesser = quicksort(lesser);
+          greater = quicksort(greater);
+          middle.addAll(greater);
+
+2020-12-18 12:02:26,646	[INFO]	7	SUCCESS	 12.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 14), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0), 'direction': 'before'}) | MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5), 'direction': 'before'}) | ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '<'})
+2020-12-18 12:02:30,039	[INFO]	8	SUCCESS	 13.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5), 'direction': 'before'})
+2020-12-18 12:02:33,402	[INFO]	9	SUCCESS	 13.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 14), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0), 'direction': 'before'}) | MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5), 'direction': 'before'}) | StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 1)})
+2020-12-18 12:02:34,290	[INFO]	10	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 14), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0), 'direction': 'before'}) | MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5), 'direction': 'before'}) | MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 0), 'ingredient': ('java_programs/QUICKSORT.java.xml', 8), 'direction': 'before'})
+2020-12-18 12:02:34,292	[INFO]	11	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 14), 'ingredient': ('java_programs/QUICKSORT.java.xml', 0), 'direction': 'before'})
+2020-12-18 12:02:34,292	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 29,34 ****
+--- 29,37 ----
+          }
+          ArrayList<Integer> middle = new ArrayList<Integer>();
+          middle.add(pivot);
++         if (arr.isEmpty()) {
++             return new ArrayList<Integer>();
++         }
+          lesser = quicksort(lesser);
+          greater = quicksort(greater);
+          middle.addAll(greater);
+
+2020-12-18 12:02:34,293	[INFO]	12	SUCCESS	+1.0	
+2020-12-18 12:02:34,293	[DEBUG]	
+2020-12-18 12:02:35,184	[INFO]	13	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 5), 'ingredient': ('java_programs/QUICKSORT.java.xml', 18)})
+2020-12-18 12:02:38,617	[INFO]	14	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 8)})
+2020-12-18 12:02:43,720	[INFO]	15	SUCCESS	+1.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15), 'direction': 'before'})
+2020-12-18 12:02:43,721	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 31,36 ****
+--- 31,37 ----
+          middle.add(pivot);
+          lesser = quicksort(lesser);
+          greater = quicksort(greater);
++         greater = quicksort(greater);
+          middle.addAll(greater);
+          lesser.addAll(middle);
+          return lesser;
+
+2020-12-18 12:02:43,723	[INFO]	16	SUCCESS	+1.0	
+2020-12-18 12:02:43,723	[DEBUG]	
+2020-12-18 12:02:51,393	[INFO]	17	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 13)})
+2020-12-18 12:02:59,004	[INFO]	18	SUCCESS	*0.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>='})
+2020-12-18 12:02:59,006	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x >= pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 12:02:59,007	[INFO]	==== END ====
+2020-12-18 12:02:59,008	[INFO]	Reason: target fitness reached
+2020-12-18 12:02:59,009	[INFO]	
+2020-12-18 12:02:59,010	[INFO]	========== EPOCH 17 ==========
+2020-12-18 12:02:59,010	[INFO]	==== WARMUP ====
+2020-12-18 12:03:05,262	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:03:05,263	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:03:10,783	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:03:10,784	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:03:15,633	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:03:15,634	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:03:21,669	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 12:03:21,670	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:03:21,670	[INFO]	==== START ====
+2020-12-18 12:03:23,802	[INFO]	1	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 5), 'ingredient': ('java_programs/QUICKSORT.java.xml', 11), 'direction': 'before'})
+2020-12-18 12:03:29,779	[INFO]	2	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>='})
+2020-12-18 12:03:29,781	[INFO]	3	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'})
+2020-12-18 12:03:29,781	[DEBUG]	
+2020-12-18 12:03:29,782	[INFO]	4	SUCCESS	+1.0	
+2020-12-18 12:03:29,783	[DEBUG]	
+2020-12-18 12:03:30,996	[INFO]	5	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 6)})
+2020-12-18 12:03:35,923	[INFO]	6	SUCCESS	*0.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>='})
+2020-12-18 12:03:35,924	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x >= pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 12:03:35,924	[INFO]	==== END ====
+2020-12-18 12:03:35,925	[INFO]	Reason: target fitness reached
+2020-12-18 12:03:35,926	[INFO]	
+2020-12-18 12:03:35,926	[INFO]	========== EPOCH 18 ==========
+2020-12-18 12:03:35,926	[INFO]	==== WARMUP ====
+2020-12-18 12:03:40,587	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:03:40,588	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:03:45,185	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:03:45,186	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:03:49,744	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:03:49,744	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:03:54,238	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 12:03:54,238	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:03:54,238	[INFO]	==== START ====
+2020-12-18 12:03:54,239	[INFO]	1	SUCCESS	+1.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 4)})
+2020-12-18 12:03:54,240	[DEBUG]	
+2020-12-18 12:03:59,321	[INFO]	2	SUCCESS	 13.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 4)}) | StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 5)})
+2020-12-18 12:03:59,323	[INFO]	3	SUCCESS	+1.0	
+2020-12-18 12:03:59,323	[DEBUG]	
+2020-12-18 12:03:59,325	[INFO]	4	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 5)})
+2020-12-18 12:04:01,147	[INFO]	5	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 12), 'ingredient': ('java_programs/QUICKSORT.java.xml', 4)})
+2020-12-18 12:04:01,150	[INFO]	6	SUCCESS	+1.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15)})
+2020-12-18 12:04:01,151	[DEBUG]	
+2020-12-18 12:04:01,153	[INFO]	7	SUCCESS	+1.0	
+2020-12-18 12:04:01,154	[DEBUG]	
+2020-12-18 12:04:08,083	[INFO]	8	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 16)})
+2020-12-18 12:04:09,644	[INFO]	9	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 5), 'ingredient': ('java_programs/QUICKSORT.java.xml', 8)})
+2020-12-18 12:04:15,542	[INFO]	10	SUCCESS	 13.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 9), 'ingredient': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 12:04:17,153	[INFO]	11	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 8), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5)})
+2020-12-18 12:04:18,395	[INFO]	12	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 6), 'ingredient': ('java_programs/QUICKSORT.java.xml', 2)})
+2020-12-18 12:04:20,119	[INFO]	13	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 13), 'ingredient': ('java_programs/QUICKSORT.java.xml', 8)})
+2020-12-18 12:04:21,768	[INFO]	14	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 18)})
+2020-12-18 12:04:27,429	[INFO]	15	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 8)})
+2020-12-18 12:04:28,920	[INFO]	16	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 4)})
+2020-12-18 12:04:28,921	[INFO]	17	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'})
+2020-12-18 12:04:28,922	[DEBUG]	
+2020-12-18 12:04:28,922	[INFO]	18	SUCCESS	+1.0	
+2020-12-18 12:04:28,923	[DEBUG]	
+2020-12-18 12:04:30,168	[INFO]	19	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 9), 'direction': 'before'})
+2020-12-18 12:04:30,169	[INFO]	20	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 5)})
+2020-12-18 12:04:35,730	[INFO]	21	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 12:04:37,293	[INFO]	22	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 17)})
+2020-12-18 12:04:38,740	[INFO]	23	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 3)})
+2020-12-18 12:04:38,742	[INFO]	24	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 5)})
+2020-12-18 12:04:40,356	[INFO]	25	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 3), 'ingredient': ('java_programs/QUICKSORT.java.xml', 1), 'direction': 'before'})
+2020-12-18 12:04:45,854	[INFO]	26	SUCCESS	 13.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '>'})
+2020-12-18 12:04:47,363	[INFO]	27	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 8), 'ingredient': ('java_programs/QUICKSORT.java.xml', 17)})
+2020-12-18 12:04:48,876	[INFO]	28	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 0), 'ingredient': ('java_programs/QUICKSORT.java.xml', 4)})
+2020-12-18 12:04:54,515	[INFO]	29	SUCCESS	*0.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 12:04:54,516	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 12:04:54,518	[INFO]	==== END ====
+2020-12-18 12:04:54,518	[INFO]	Reason: target fitness reached
+2020-12-18 12:04:54,520	[INFO]	
+2020-12-18 12:04:54,520	[INFO]	========== EPOCH 19 ==========
+2020-12-18 12:04:54,521	[INFO]	==== WARMUP ====
+2020-12-18 12:04:59,955	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:04:59,955	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:05:05,470	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:05:05,471	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:05:10,993	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:05:10,993	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:05:16,712	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 12:05:16,712	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:05:16,713	[INFO]	==== START ====
+2020-12-18 12:05:18,243	[INFO]	1	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 17), 'ingredient': ('java_programs/QUICKSORT.java.xml', 18)})
+2020-12-18 12:05:19,404	[INFO]	2	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 13), 'ingredient': ('java_programs/QUICKSORT.java.xml', 9), 'direction': 'before'})
+2020-12-18 12:05:20,929	[INFO]	3	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 4), 'ingredient': ('java_programs/QUICKSORT.java.xml', 15)})
+2020-12-18 12:05:27,844	[INFO]	4	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '<'})
+2020-12-18 12:05:29,302	[INFO]	5	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 3), 'ingredient': ('java_programs/QUICKSORT.java.xml', 11), 'direction': 'before'})
+2020-12-18 12:05:30,796	[INFO]	6	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 12), 'ingredient': ('java_programs/QUICKSORT.java.xml', 18), 'direction': 'before'})
+2020-12-18 12:05:36,890	[INFO]	7	SUCCESS	+1.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '!='})
+2020-12-18 12:05:36,891	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x != pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 12:05:36,892	[INFO]	8	SUCCESS	+1.0	
+2020-12-18 12:05:36,892	[DEBUG]	
+2020-12-18 12:05:36,893	[INFO]	9	SUCCESS	+1.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 1), 'ingredient': ('java_programs/QUICKSORT.java.xml', 1)})
+2020-12-18 12:05:36,893	[DEBUG]	
+2020-12-18 12:05:36,894	[INFO]	10	SUCCESS	+1.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 1), 'ingredient': ('java_programs/QUICKSORT.java.xml', 1)}) | ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'})
+2020-12-18 12:05:36,895	[DEBUG]	
+2020-12-18 12:05:42,817	[INFO]	11	SUCCESS	*0.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 1), 'ingredient': ('java_programs/QUICKSORT.java.xml', 1)}) | ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'}) | ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 12:05:42,819	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 12:05:42,820	[INFO]	==== END ====
+2020-12-18 12:05:42,820	[INFO]	Reason: target fitness reached
+2020-12-18 12:05:42,822	[INFO]	
+2020-12-18 12:05:42,822	[INFO]	========== EPOCH 20 ==========
+2020-12-18 12:05:42,823	[INFO]	==== WARMUP ====
+2020-12-18 12:05:48,325	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:05:48,325	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:05:53,949	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:05:53,949	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:05:59,373	[INFO]	WARM	SUCCESS	 1.0	
+2020-12-18 12:05:59,373	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:06:04,983	[INFO]	INITIAL	SUCCESS	 1.0	
+2020-12-18 12:06:04,983	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 1.0>
+2020-12-18 12:06:04,984	[INFO]	==== START ====
+2020-12-18 12:06:10,507	[INFO]	1	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 0)})
+2020-12-18 12:06:10,510	[INFO]	2	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 0)})
+2020-12-18 12:06:12,075	[INFO]	3	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 3), 'ingredient': ('java_programs/QUICKSORT.java.xml', 11), 'direction': 'before'})
+2020-12-18 12:06:17,706	[INFO]	4	SUCCESS	 13.0	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 15), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5)})
+2020-12-18 12:06:19,188	[INFO]	5	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 6), 'ingredient': ('java_programs/QUICKSORT.java.xml', 13), 'direction': 'before'})
+2020-12-18 12:06:20,695	[INFO]	6	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 3), 'ingredient': ('java_programs/QUICKSORT.java.xml', 5)})
+2020-12-18 12:06:22,203	[INFO]	7	PARSE_ERROR	 None	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 12)})
+2020-12-18 12:06:23,667	[INFO]	8	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 5), 'ingredient': ('java_programs/QUICKSORT.java.xml', 2)})
+2020-12-18 12:06:25,156	[INFO]	9	PARSE_ERROR	 None	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 1), 'ingredient': ('java_programs/QUICKSORT.java.xml', 17), 'direction': 'before'})
+2020-12-18 12:06:25,158	[INFO]	10	SUCCESS	 13.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 0)})
+2020-12-18 12:06:26,609	[INFO]	11	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 16), 'ingredient': ('java_programs/QUICKSORT.java.xml', 18)})
+2020-12-18 12:06:32,286	[INFO]	12	SUCCESS	 12.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '<='})
+2020-12-18 12:06:37,972	[INFO]	13	SUCCESS	 12.0	MyStmtInsertion({'target': ('java_programs/QUICKSORT.java.xml', 13), 'ingredient': ('java_programs/QUICKSORT.java.xml', 16), 'direction': 'before'})
+2020-12-18 12:06:43,505	[INFO]	14	SUCCESS	 12.0	StmtDeletion({'target': ('java_programs/QUICKSORT.java.xml', 11)})
+2020-12-18 12:06:48,841	[INFO]	15	SUCCESS	*0.0	ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 12:06:48,842	[DEBUG]	*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 12:06:48,843	[INFO]	==== END ====
+2020-12-18 12:06:48,843	[INFO]	Reason: target fitness reached
+2020-12-18 12:06:48,845	[INFO]	
+2020-12-18 12:06:48,845	[INFO]	========== REPORT ==========
+2020-12-18 12:06:48,845	[INFO]	==== Epoch 1 ====
+2020-12-18 12:06:48,845	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,845	[INFO]	Number of interations: 17
+2020-12-18 12:06:48,845	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,845	[INFO]	Best patch: ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 12:06:48,845	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 12:06:48,846	[INFO]	==== Epoch 2 ====
+2020-12-18 12:06:48,846	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,846	[INFO]	Number of interations: 23
+2020-12-18 12:06:48,846	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,846	[INFO]	Best patch: ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>'}) | ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>='})
+2020-12-18 12:06:48,846	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x >= pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 12:06:48,846	[INFO]	==== Epoch 3 ====
+2020-12-18 12:06:48,846	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,846	[INFO]	Number of interations: 64
+2020-12-18 12:06:48,847	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,847	[INFO]	Best patch: ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>='})
+2020-12-18 12:06:48,847	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x >= pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 12:06:48,847	[INFO]	==== Epoch 4 ====
+2020-12-18 12:06:48,847	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,847	[INFO]	Number of interations: 8
+2020-12-18 12:06:48,847	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,847	[INFO]	Best patch: ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>='})
+2020-12-18 12:06:48,847	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x >= pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 12:06:48,848	[INFO]	==== Epoch 5 ====
+2020-12-18 12:06:48,848	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,848	[INFO]	Number of interations: 51
+2020-12-18 12:06:48,848	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,848	[INFO]	Best patch: ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 12:06:48,848	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 12:06:48,848	[INFO]	==== Epoch 6 ====
+2020-12-18 12:06:48,848	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,848	[INFO]	Number of interations: 44
+2020-12-18 12:06:48,849	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,849	[INFO]	Best patch: ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>='})
+2020-12-18 12:06:48,849	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x >= pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 12:06:48,849	[INFO]	==== Epoch 7 ====
+2020-12-18 12:06:48,849	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,849	[INFO]	Number of interations: 16
+2020-12-18 12:06:48,849	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,849	[INFO]	Best patch: ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 12:06:48,849	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 12:06:48,850	[INFO]	==== Epoch 8 ====
+2020-12-18 12:06:48,850	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,850	[INFO]	Number of interations: 9
+2020-12-18 12:06:48,850	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,850	[INFO]	Best patch: ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 12:06:48,850	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 12:06:48,850	[INFO]	==== Epoch 9 ====
+2020-12-18 12:06:48,850	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,850	[INFO]	Number of interations: 38
+2020-12-18 12:06:48,850	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,851	[INFO]	Best patch: ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 12:06:48,851	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 12:06:48,851	[INFO]	==== Epoch 10 ====
+2020-12-18 12:06:48,851	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,851	[INFO]	Number of interations: 1
+2020-12-18 12:06:48,851	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,851	[INFO]	Best patch: ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>='})
+2020-12-18 12:06:48,851	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x >= pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 12:06:48,852	[INFO]	==== Epoch 11 ====
+2020-12-18 12:06:48,852	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,852	[INFO]	Number of interations: 59
+2020-12-18 12:06:48,852	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,852	[INFO]	Best patch: ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 12:06:48,852	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 12:06:48,852	[INFO]	==== Epoch 12 ====
+2020-12-18 12:06:48,852	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,852	[INFO]	Number of interations: 26
+2020-12-18 12:06:48,852	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,853	[INFO]	Best patch: ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 12:06:48,853	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 12:06:48,853	[INFO]	==== Epoch 13 ====
+2020-12-18 12:06:48,853	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,853	[INFO]	Number of interations: 24
+2020-12-18 12:06:48,853	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,853	[INFO]	Best patch: ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 12:06:48,853	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 12:06:48,853	[INFO]	==== Epoch 14 ====
+2020-12-18 12:06:48,854	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,854	[INFO]	Number of interations: 3
+2020-12-18 12:06:48,854	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,854	[INFO]	Best patch: ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>='})
+2020-12-18 12:06:48,854	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x >= pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 12:06:48,854	[INFO]	==== Epoch 15 ====
+2020-12-18 12:06:48,854	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,854	[INFO]	Number of interations: 42
+2020-12-18 12:06:48,854	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,854	[INFO]	Best patch: ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>='})
+2020-12-18 12:06:48,855	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x >= pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 12:06:48,855	[INFO]	==== Epoch 16 ====
+2020-12-18 12:06:48,855	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,855	[INFO]	Number of interations: 18
+2020-12-18 12:06:48,855	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,855	[INFO]	Best patch: ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>='})
+2020-12-18 12:06:48,855	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x >= pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 12:06:48,855	[INFO]	==== Epoch 17 ====
+2020-12-18 12:06:48,855	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,856	[INFO]	Number of interations: 6
+2020-12-18 12:06:48,856	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,856	[INFO]	Best patch: ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 10), 'value': '>='})
+2020-12-18 12:06:48,856	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 23,29 ****
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x > pivot) {
+                  greater.add(x);
+              }
+          }
+--- 23,29 ----
+          for (Integer x : arr.subList(1, arr.size())) {
+              if (x < pivot) {
+                  lesser.add(x);
+!             } else if (x >= pivot) {
+                  greater.add(x);
+              }
+          }
+
+2020-12-18 12:06:48,856	[INFO]	==== Epoch 18 ====
+2020-12-18 12:06:48,856	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,856	[INFO]	Number of interations: 29
+2020-12-18 12:06:48,856	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,856	[INFO]	Best patch: ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 12:06:48,856	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 12:06:48,857	[INFO]	==== Epoch 19 ====
+2020-12-18 12:06:48,857	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,857	[INFO]	Number of interations: 11
+2020-12-18 12:06:48,858	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,858	[INFO]	Best patch: StmtReplacement({'target': ('java_programs/QUICKSORT.java.xml', 1), 'ingredient': ('java_programs/QUICKSORT.java.xml', 1)}) | ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<'}) | ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 12:06:48,858	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 12:06:48,858	[INFO]	==== Epoch 20 ====
+2020-12-18 12:06:48,858	[INFO]	Termination: target fitness reached
+2020-12-18 12:06:48,859	[INFO]	Number of interations: 15
+2020-12-18 12:06:48,859	[INFO]	Best fitness: 0.0
+2020-12-18 12:06:48,859	[INFO]	Best patch: ComparisonOperatorSetting({'target': ('java_programs/QUICKSORT.java.xml', 7), 'value': '<='})
+2020-12-18 12:06:48,859	[INFO]	Diff:
+*** before: java_programs/QUICKSORT.java.xml
+--- after: java_programs/QUICKSORT.java.xml
+***************
+*** 21,27 ****
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x < pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+--- 21,27 ----
+          ArrayList<Integer> greater = new ArrayList<Integer>();
+  
+          for (Integer x : arr.subList(1, arr.size())) {
+!             if (x <= pivot) {
+                  lesser.add(x);
+              } else if (x > pivot) {
+                  greater.add(x);
+
+2020-12-18 12:06:48,867	[INFO]	Experiment duration: 1191.0445702075958

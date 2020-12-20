@@ -17,17 +17,17 @@ from pyggi.algo import FirstImprovement
 from pyggi.utils import Logger
 
 TARGET_FILES = [
-        # ### 'BITCOUNT', # initilal solution failed
-        'BREADTH_FIRST_SEARCH',
+        ### 'BITCOUNT', # initilal solution failed
+        # 'BREADTH_FIRST_SEARCH',
         # ### 'BUCKETSORT', # no passing testcases
         # 'DEPTH_FIRST_SEARCH',
         # 'DETECT_CYCLE',
         # ### 'FIND_FIRST_IN_SORTED', # initilal solution failed
         # 'FIND_IN_SORTED',
         # 'FLATTEN',
-        # ### 'GCD', # no passing testcases
+        ### 'GCD', # no passing testcases
         # 'GET_FACTORS',
-        # ### 'HANOI', # no passing testcases
+        ### 'HANOI', # no passing testcases
         # 'IS_VALID_PARENTHESIZATION',
         # 'KHEAPSORT',
         # 'KNAPSACK',
@@ -36,27 +36,27 @@ TARGET_FILES = [
         # 'LEVENSHTEIN',
         # 'LIS',
         # 'LONGEST_COMMON_SUBSEQUENCE',
-        # 'MAX_SUBLIST_SUM',
+        #'MAX_SUBLIST_SUM',
         # 'MERGESORT',
         # ### 'MINIMUM_SPANNING_TREE', # initilal solution failed
         # 'NEXT_PALINDROME',
         # 'NEXT_PERMUTATION',
         # 'PASCAL',
-        # ### 'POSSIBLE_CHANGE', # no passing testcases
+        ### 'POSSIBLE_CHANGE', # no passing testcases
         # 'POWERSET',
         # 'QUICKSORT',
         # ### 'REVERSE_LINKED_LIST', # initilal solution failed
         # ### 'RPN_EVAL', # initilal solution failed
-        # 'SHORTEST_PATH_LENGTH',
-        # 'SHORTEST_PATH_LENGTHS',
-        # ### 'SHORTEST_PATHS', # no passing testcases
-        # ### 'SHUNTING_YARD', # no passing testcases
-        # 'SIEVE',
-        # ### 'SQRT', # initilal solution failed
-        # 'SUBSEQUENCES',
-        # ### 'TO_BASE', # no passing testcases
-        # ### 'TOPOLOGICAL_ORDERING', # no passing testcases
-        # 'WRAP',
+        'SHORTEST_PATH_LENGTH',
+        'SHORTEST_PATH_LENGTHS',
+        ### 'SHORTEST_PATHS', # no passing testcases
+        ### 'SHUNTING_YARD', # no passing testcases
+        'SIEVE',
+        ### 'SQRT', # initilal solution failed
+        'SUBSEQUENCES',
+        ### 'TO_BASE', # no passing testcases
+        ### 'TOPOLOGICAL_ORDERING', # no passing testcases
+        'WRAP',
     ]
 
 STMT_TAGS = {
@@ -172,14 +172,27 @@ class MyProgram(TreeProgram):
         self.target_files = config["target_files"]
         self.test_command = config["test_command"]
 
+    # def create_edit(self, patch=None):
+    #     if len(self.possible_edits) == 0:
+    #         raise AssertionError('Impossible to create new edits')
+    #     operator = random.choice(self.possible_edits)
+    #     for _ in range(1000):
+    #         edit = operator.create(self)
+    #         if self.would_edit_be_valid(edit):
+    #             return edit
+    #     raise AssertionError('Failed to create a valid edit of type {}'.format(operator))
+
     def create_edit(self, patch=None):
         if len(self.possible_edits) == 0:
             raise AssertionError('Impossible to create new edits')
-        operator = random.choice(self.possible_edits)
-        for _ in range(1000):
-            edit = operator.create(self)
-            if self.would_edit_be_valid(edit):
-                return edit
+        possible_edits_tmp = copy.deepcopy(self.possible_edits)
+        while len(possible_edits_tmp) > 0:
+            operator = random.choice(possible_edits_tmp)
+            for _ in range(1000):
+                edit = operator.create(self)
+                if self.would_edit_be_valid(edit):
+                    return edit
+            possible_edits_tmp.remove(operator)
         raise AssertionError('Failed to create a valid edit of type {}'.format(operator))
 
     def would_edit_be_valid(self, edit):

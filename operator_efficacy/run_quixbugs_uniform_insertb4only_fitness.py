@@ -39,24 +39,24 @@ TARGET_FILES = [
         # 'MAX_SUBLIST_SUM',
         # 'MERGESORT',
         # ### 'MINIMUM_SPANNING_TREE', # initilal solution failed
-        'NEXT_PALINDROME',
-        'NEXT_PERMUTATION',
-        'PASCAL',
-        ### 'POSSIBLE_CHANGE', # no passing testcases
-        'POWERSET',
-        'QUICKSORT',
+        # 'NEXT_PALINDROME',
+        # 'NEXT_PERMUTATION',
+        # 'PASCAL',
+        # ### 'POSSIBLE_CHANGE', # no passing testcases
+        # 'POWERSET',
+        # 'QUICKSORT',
         # ### 'REVERSE_LINKED_LIST', # initilal solution failed
         # ### 'RPN_EVAL', # initilal solution failed
-        # 'SHORTEST_PATH_LENGTH',
-        # 'SHORTEST_PATH_LENGTHS',
-        # ### 'SHORTEST_PATHS', # no passing testcases
-        # ### 'SHUNTING_YARD', # no passing testcases
-        # 'SIEVE',
-        # ### 'SQRT', # initilal solution failed
-        # 'SUBSEQUENCES',
-        # ### 'TO_BASE', # no passing testcases
-        # ### 'TOPOLOGICAL_ORDERING', # no passing testcases
-        # 'WRAP',
+        'SHORTEST_PATH_LENGTH',
+        'SHORTEST_PATH_LENGTHS',
+        ### 'SHORTEST_PATHS', # no passing testcases
+        ### 'SHUNTING_YARD', # no passing testcases
+        'SIEVE',
+        ### 'SQRT', # initilal solution failed
+        'SUBSEQUENCES',
+        ### 'TO_BASE', # no passing testcases
+        ### 'TOPOLOGICAL_ORDERING', # no passing testcases
+        'WRAP',
     ]
 
 STMT_TAGS = {
