@@ -17,46 +17,46 @@ from pyggi.algo import FirstImprovement
 from pyggi.utils import Logger
 
 TARGET_FILES = [
-        ### 'BITCOUNT', # initilal solution failed
-        # 'BREADTH_FIRST_SEARCH',
-        ### 'BUCKETSORT', # no passing testcases
-        # 'DEPTH_FIRST_SEARCH',
-        # 'DETECT_CYCLE',
-        # ### 'FIND_FIRST_IN_SORTED',
-        # 'FIND_IN_SORTED', # initilal solution failed
-        # 'FLATTEN',
-        # # ### 'GCD', # no passing testcases
-        # 'GET_FACTORS',
-        # ### 'HANOI', # no passing testcases
-        # 'IS_VALID_PARENTHESIZATION',
-        # 'KHEAPSORT',
-        # 'KNAPSACK',
-        # 'KTH',
-        # 'LCS_LENGTH',
+        ## 'BITCOUNT', # initilal solution failed
+        'BREADTH_FIRST_SEARCH',
+        ## 'BUCKETSORT', # no passing testcases
+        'DEPTH_FIRST_SEARCH',
+        'DETECT_CYCLE',
+        ### 'FIND_FIRST_IN_SORTED', # initilal solution failed
+        'FIND_IN_SORTED',
+        'FLATTEN',
+        # ### 'GCD', # no passing testcases
+        'GET_FACTORS',
+        ### 'HANOI', # no passing testcases
+        'IS_VALID_PARENTHESIZATION',
+        'KHEAPSORT',
+        'KNAPSACK',
+        'KTH',
+        'LCS_LENGTH',
         'LEVENSHTEIN',
         'LIS',
         'LONGEST_COMMON_SUBSEQUENCE',
         'MAX_SUBLIST_SUM',
         'MERGESORT',
-        # ### 'MINIMUM_SPANNING_TREE', # initilal solution failed
-        # 'NEXT_PALINDROME',
-        # 'NEXT_PERMUTATION',
-        # 'PASCAL',
-        # ### 'POSSIBLE_CHANGE', # no passing testcases
-        # 'POWERSET',
-        # 'QUICKSORT',
-        # ### 'REVERSE_LINKED_LIST', # initilal solution failed
-        # ### 'RPN_EVAL', # initilal solution failed
-        # 'SHORTEST_PATH_LENGTH',
-        # 'SHORTEST_PATH_LENGTHS',
-        # ### 'SHORTEST_PATHS', # no passing testcases
-        # ### 'SHUNTING_YARD', # no passing testcases
-        # 'SIEVE',
-        # ### 'SQRT', # initilal solution failed
-        # 'SUBSEQUENCES',
-        # ### 'TO_BASE', # no passing testcases
-        # ### 'TOPOLOGICAL_ORDERING', # no passing testcases
-        # 'WRAP',
+        ### 'MINIMUM_SPANNING_TREE', # initilal solution failed
+        'NEXT_PALINDROME',
+        'NEXT_PERMUTATION',
+        'PASCAL',
+        ### 'POSSIBLE_CHANGE', # no passing testcases
+        'POWERSET',
+        'QUICKSORT',
+        ### 'REVERSE_LINKED_LIST', # initilal solution failed
+        ### 'RPN_EVAL', # initilal solution failed
+        'SHORTEST_PATH_LENGTH',
+        'SHORTEST_PATH_LENGTHS',
+        ### 'SHORTEST_PATHS', # no passing testcases
+        ### 'SHUNTING_YARD', # no passing testcases
+        'SIEVE',
+        ### 'SQRT', # initilal solution failed
+        'SUBSEQUENCES',
+        ### 'TO_BASE', # no passing testcases
+        ### 'TOPOLOGICAL_ORDERING', # no passing testcases
+        'WRAP',
     ]
 
 STMT_TAGS = {
@@ -110,6 +110,9 @@ class MyFirstImprovement(FirstImprovement):
         if self.stats['steps'] == 0:
             self.previous_fitness = self.report['initial_fitness']
             self.previous_patch_len = 0
+            self.previous_failures_info = None
+            self.previous_run_status = None
+            self.previous_return_code = None
 
         # list of all possible modification points for current program:
         mod_points_list = next(iter(self.program.modification_points.values()))
@@ -139,19 +142,24 @@ class MyFirstImprovement(FirstImprovement):
                 target = mod_points_list[int(last_added_edit.target[1])]
                 ingredient = last_added_edit.value
 
-        self.program.logger2.info("{};{};{};{};{};{};{};{};{};{};{}".format(
-            self.stats['steps'] + 1, run.status, self.program.return_code, # current iteration number and run status
+        self.program.logger2.info("{};{};{};{};{};{};{};{};{};{};{};{};{};{}".format(
+            self.stats['steps'] + 1, # current iteration number
+            run.status, self.previous_run_status, # current and previous run status
+            self.program.return_code, self.previous_return_code, # current and previous return code
             run.fitness, self.previous_fitness, #  current and previous fitness
             current_patch_len, self.previous_patch_len, # number of edits in the current and previous patch
             operator, target, ingredient, # lastly added edit and its parameters
-            self.program.failures_info)) # test cases failures info if applicable
+            self.program.failures_info, self.previous_failures_info)) # current and previous test cases failures info if applicable
 
         # if the patch will be accepted for further exploration
         # (meaning used as a starting point for obtaining next new patch)
-        # remember its fitness and number of edits
+        # remember its stats as stats of the previous patch
         if accept:
             self.previous_fitness = run.fitness
             self.previous_patch_len = current_patch_len
+            self.previous_failures_info = self.program.failures_info
+            self.previous_run_status = run.status
+            self.previous_return_code = self.program.return_code
 
 class MySrcmlEngine(SrcmlEngine):
     TAG_RENAME = dict()
