@@ -1,5 +1,0 @@
-2020-12-11 16:40:49,468	[INFO]	Path to the temporal program variants: ./.pyggi/tmp_variants/QuixBugs/1607701249
-2020-12-11 16:40:49,468	[INFO]	========== EPOCH 1 ==========
-2020-12-11 16:40:49,468	[INFO]	==== WARMUP ====
-2020-12-11 16:40:50,929	[INFO]	WARM	PARSE_ERROR	 None	
-2020-12-11 16:40:50,929	[DEBUG]	<RunResult 'status': 'PARSE_ERROR', 'fitness': None>

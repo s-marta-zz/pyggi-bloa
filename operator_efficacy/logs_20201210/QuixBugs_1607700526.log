@@ -1,9 +1,0 @@
-2020-12-11 16:28:47,029	[INFO]	Path to the temporal program variants: ./.pyggi/tmp_variants/QuixBugs/1607700526
-2020-12-11 16:28:47,030	[INFO]	========== EXPERIMENT FOR ['java_programs/BUCKETSORT.java.xml']  ==========
-2020-12-11 16:28:47,030	[INFO]	modification points:
- ['./decl_stmt[1]', './for[1]', './for[1]/expr_stmt[1]', './decl_stmt[2]', './decl_stmt[3]', './for[2]', './for[2]/expr_stmt[1]', './for[2]/expr_stmt[2]', './return[1]']
-2020-12-11 16:28:47,030	[INFO]	number of statements and comparisons: 9, 0
-2020-12-11 16:28:47,030	[INFO]	========== EPOCH 1 ==========
-2020-12-11 16:28:47,030	[INFO]	==== WARMUP ====
-2020-12-11 16:28:49,040	[INFO]	WARM	PARSE_ERROR	 None	
-2020-12-11 16:28:49,040	[DEBUG]	<RunResult 'status': 'PARSE_ERROR', 'fitness': None>

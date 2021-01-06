@@ -1,9 +1,0 @@
-2020-12-10 12:20:27,947	[INFO]	Path to the temporal program variants: ./.pyggi/tmp_variants/QuixBugs/1607599227
-2020-12-10 12:20:27,947	[INFO]	========== EXPERIMENT FOR ['java_programs/RPN_EVAL.java.xml']  ==========
-2020-12-10 12:20:27,947	[INFO]	modification points:
- ['./decl_stmt[1]', './expr_stmt[1]', './expr_stmt[2]', './expr_stmt[3]', './expr_stmt[4]', './decl_stmt[2]', './for[1]', './for[1]/if[1]', './for[1]/if[1]/expr_stmt[1]', './for[1]/expr_stmt[1]', './for[1]/decl_stmt[1]', './for[1]/decl_stmt[2]', './for[1]/decl_stmt[3]', './for[1]/decl_stmt[4]', './for[1]/expr_stmt[2]', './for[1]/expr_stmt[3]', './return[1]']
-2020-12-10 12:20:27,947	[INFO]	number of statements and comparisons: 17, 0
-2020-12-10 12:20:27,948	[INFO]	========== EPOCH 1 ==========
-2020-12-10 12:20:27,948	[INFO]	==== WARMUP ====
-2020-12-10 12:20:28,760	[INFO]	WARM	PARSE_ERROR	 None	
-2020-12-10 12:20:28,761	[DEBUG]	<RunResult 'status': 'PARSE_ERROR', 'fitness': None>

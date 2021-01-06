@@ -47,16 +47,16 @@ TARGET_FILES = [
         # 'QUICKSORT',
         # ### 'REVERSE_LINKED_LIST', # initilal solution failed
         # ### 'RPN_EVAL', # initilal solution failed
-        'SHORTEST_PATH_LENGTH',
-        'SHORTEST_PATH_LENGTHS',
+        # 'SHORTEST_PATH_LENGTH',
+        # 'SHORTEST_PATH_LENGTHS',
         ### 'SHORTEST_PATHS', # no passing testcases
         ### 'SHUNTING_YARD', # no passing testcases
-        'SIEVE',
+        # 'SIEVE',
         ### 'SQRT', # initilal solution failed
-        'SUBSEQUENCES',
+        # 'SUBSEQUENCES',
         ### 'TO_BASE', # no passing testcases
         ### 'TOPOLOGICAL_ORDERING', # no passing testcases
-        'WRAP',
+        # 'WRAP',
     ]
 
 STMT_TAGS = {
