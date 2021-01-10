@@ -358,15 +358,6 @@ if __name__ == "__main__":
         # theengine = next(iter(protocol.program.engines.values()))
         # thetree = next(iter(protocol.program.contents.values()))
         # print(theengine.tree_to_string(thetree))
-        #
-        # # modification points for the program:
-        # mod_points_list = next(iter(protocol.program.modification_points.values()))
-        # # number of mod points that are comparison operators or are statements:
-        # m = len([mp for mp in mod_points_list if "operator_comp" in mp])
-        # n = len(mod_points_list) - m
-        # print_mplist = [mp for mp in mod_points_list if "operator_comp" in mp]
-        # print("modification points:\n {}".format(print_mplist))
-        # print("number of statements and comparisons: {}, {}".format(n, m))
 
         # run experiment:
         protocol.run()
