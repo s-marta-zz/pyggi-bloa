@@ -3,10 +3,10 @@ The project is on Uniform Modification Operator Selection Strategy and Operators
 
 
 ## Prerequisites:
-* [PyGGI 2.0](https://github.com/coinse/pyggi) The project uses PyGGI 2.0 as the APR GI tool
-* [QuixBugs benchmark](https://github.com/jkoppel/QuixBugs) The project uses Java programs from the QuixBugs benchmark for evalutation
+* [PyGGI 2.0](https://github.com/coinse/pyggi) - The project uses PyGGI 2.0 as the APR GI tool
+* [QuixBugs benchmark](https://github.com/jkoppel/QuixBugs) - The project uses Java programs from the QuixBugs benchmark for evalutation
 * [Python 3.5+](https://www.continuum.io/downloads)
-* [srcML](https://www.srcml.org/#download) (needed to translate Java code to XML-based representtion
+* [srcML](https://www.srcml.org/#download) - (needed to translate Java code to XML-based representation)
 
 ## Instructions:
 * ./QuixBugs - a directory with the QuixBugs Java programs and their test suites
