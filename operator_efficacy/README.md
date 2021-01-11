@@ -1,6 +1,6 @@
 **This is a repository for a dissertation project for the MSc Software Systems Engineering degree at UCL**
 
-**The project is on Uniform Modification Operator Selection Strategy and Operators Efficacy for Genetic Improvement Techniques**
+**The project is on Uniform Operator Selection Strategy and Mutation Operators Efficacy for Genetic Improvement Techniques**
 
 
 ## Prerequisites:
