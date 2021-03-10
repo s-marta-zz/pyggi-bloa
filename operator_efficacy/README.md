@@ -24,6 +24,4 @@
 * operatorefficacy_results.csv, operatorefficacy_results_ot.csv, operatorefficacy_results_oti.csv - csv files with raw data for the analysis
 
 
-### TODO: upload paper pfd after its finalised
-
-^ This report is submitted as part requirement for the MSc Software Systems Engineering degree at UCL. It is substantially the result of my own work except where explicitly indicated in the text. The report may be freely copied and distributed provided the source is explicitly acknowledged.
+This report is submitted as part requirement for the MSc Software Systems Engineering degree at UCL. It is substantially the result of my own work except where explicitly indicated in the text. The report may be freely copied and distributed provided the source is explicitly acknowledged.
