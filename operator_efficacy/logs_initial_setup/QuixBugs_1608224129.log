@@ -1,0 +1,19 @@
+2020-12-17 17:55:29,973	[INFO]	Path to the temporal program variants: ./.pyggi/tmp_variants/QuixBugs/1608224129
+2020-12-17 17:55:29,973	[INFO]	========== EXPERIMENT FOR ['java_programs/MAX_SUBLIST_SUM.java.xml']  ==========
+2020-12-17 17:55:29,973	[INFO]	modification points:
+ ['./decl_stmt[1]', './decl_stmt[2]', './for[1]', './for[1]/expr_stmt[1]', './for[1]/expr_stmt[2]', './return[1]']
+2020-12-17 17:55:29,973	[INFO]	number of statements and comparisons: 6, 0
+2020-12-17 17:55:29,973	[INFO]	========== EPOCH 1 ==========
+2020-12-17 17:55:29,974	[INFO]	==== WARMUP ====
+2020-12-17 17:55:32,882	[INFO]	WARM	SUCCESS	 4.0	
+2020-12-17 17:55:32,883	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 4.0>
+2020-12-17 17:55:35,966	[INFO]	WARM	SUCCESS	 4.0	
+2020-12-17 17:55:35,966	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 4.0>
+2020-12-17 17:55:38,965	[INFO]	WARM	SUCCESS	 4.0	
+2020-12-17 17:55:38,965	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 4.0>
+2020-12-17 17:55:41,918	[INFO]	INITIAL	SUCCESS	 4.0	
+2020-12-17 17:55:41,918	[DEBUG]	<RunResult 'status': 'SUCCESS', 'fitness': 4.0>
+2020-12-17 17:55:41,918	[INFO]	==== START ====
+2020-12-17 17:55:42,717	[INFO]	1	PARSE_ERROR	 None	StmtReplacement({'target': ('java_programs/MAX_SUBLIST_SUM.java.xml', 5), 'ingredient': ('java_programs/MAX_SUBLIST_SUM.java.xml', 3)})
+2020-12-17 17:55:42,734	[INFO]	==== END ====
+2020-12-17 17:55:42,734	[INFO]	Reason: None
